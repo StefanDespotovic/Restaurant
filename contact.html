@@ -1,0 +1,186 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="images/logo.png">
+    <title>First Steak</title>
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Aldrich&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+      body {
+        background-color: #fff;
+      }
+    .sidenav {
+        margin-top: 2%;
+        height: 90%;
+        width: 7%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        border-right:1px solid #71a1d1;
+        overflow-x: hidden;
+        float: left;
+      }
+      
+      .sidenav a {
+        padding-left: 15%;
+        text-decoration: none;
+        font-size: 1.5vw;
+        color: #b1c8bc;
+        display: block;
+        margin-top:9vw;
+      }
+      
+      .sidenav a:hover {
+        color: #81d0e8;
+        text-shadow: 2px 2px 5px rgb(185, 185, 185);
+      }
+      
+      .main {
+        margin-left:7%;
+        width: 90%;
+        height: 50%;
+      }
+      
+      .contact{
+        padding-left:8%;
+        width: 50%;
+        height: auto;
+        float:left;
+      }
+      .contact-form{
+        width: 65%;
+        height: 20vw;
+      }
+      .contact p {
+        font-size:3.125rem;
+        color: #71a1d1;
+      }
+      input[type="text"]
+    {
+        background: transparent;
+        display: block;
+        padding: .8em 1em;
+        width: 93.5%;
+        border: 1px solid #71a1d1;
+        border-radius: .375em;
+        transition: .2s ease-out;
+    }
+    input[type="email"]
+    {
+        background: transparent;
+        display: block;
+        padding: .8em 1em;
+        width: 93.5%;
+        border: 1px solid #71a1d1;
+        border-radius: .375em;  
+        margin-top: 23%;
+        transition: .2s ease-out;    
+    }
+    input[type="submit"]
+    {
+        background: transparent;
+        display: block;
+        padding: .8em 1em;
+        width: 23.5%;
+        border: 1px solid #71a1d1;
+        border-radius: .375em;  
+        transition: .6s ease-out;  
+        color: #426e9a;  
+        margin-left: 76%;
+    }
+    input:focus {
+        border: 1.5px solid #426e9a !important;
+        outline: none;
+    }
+    .submit:hover {
+        color: #b1c8bc;
+        background:#426e9a;
+    }
+      .location{
+        padding-top: 8%;
+        width: 42%;
+        height: auto;
+        float:left;
+      }
+      .locationgmaps{
+        top:0px;
+        right:0px;
+        border-bottom-left-radius:10em;
+        position:absolute;
+        width:45vw;
+        height:33vw;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+        transition: .2s ease-out;
+      }
+      .locationgmaps:hover {
+        box-shadow: 0 3px 10px rgba(0,0,0,.2);
+        transform: translate3d(0,-2px,0);
+      }
+      .worktime {
+        margin-left:7%;
+        margin-top: 12%;
+        width: 90%;
+        float:left;
+        height: 50%;
+      }
+      .worktime p {
+        display: inline-block;
+        vertical-align: top;
+        font-size:1.125rem;
+        color: #71a1d1;
+        padding-left: 5%;
+      }
+
+      @media screen and (max-width: 768px) {
+        .sidenav {display: none;}
+      }
+      </style>
+</head>
+<body>
+    <nav>
+    <div class="sidenav">
+        <a href="index.html">About</a>
+        <a href="menu.html">Menu</a>
+        <a href="#">Contact</a>
+      </div>
+    </nav>
+
+    <main>	
+        <div class="contact">
+            <div class="contact-form">
+                    <form method="" action="">
+                        <p style="width:50%">Questions or comments?</p>
+                        <input style="width:40%; float:left;" id="name" name='name' type="text" placeholder="Name" required/>
+                        <input style="width:40%; float:left;margin-left: 7%;" id="surname" name='surname' type="text" placeholder="Surname" required/>
+                        <input id="mail" name='mail' type="email" placeholder="Email" required/>
+                        <br>
+                        <input style="padding-bottom: 15%;" id="message" name='message' type="text" placeholder="Message" required/>
+                        <br>
+                        <input class="submit" type="submit" name="signin" value="Sign In" class="btn btn-primary"></button>
+                    </form>
+
+            </div>
+        </div>
+        <div class="location">
+       <iframe class="locationgmaps" style="border:0" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAcCfU2AH3-CnzMXITFU70lpIQ7QbEWmYA
+          &q=Empire+Steak+House,New+York+NY">
+      </iframe>
+    </div>
+    <div class="worktime"> 
+            <p>237 W 54th St NY<br> New York 10019 </p>
+            <p>387 62 151 929 </p>
+            <p>firststeak@gmail.com</p>
+            <p>tablica radno vrijeme </p>
+     </div>
+
+        
+    </main>	
+</body>
+</html> 
