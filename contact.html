@@ -14,7 +14,7 @@
       body {
         background-color: #fff;
       }
-      
+
     .sidenav {
         margin-top: 2%;
         height: 90%;
@@ -137,6 +137,18 @@
         color: #71a1d1;
         padding-left: 5%;
       }
+      table{
+        display: inline-block;
+        vertical-align: top;
+      }
+      th {
+        display: inline-block;
+        vertical-align: top;
+        font-size:1.125rem;
+        color: #71a1d1;
+        padding-left: 5%;
+        text-align: right;  
+      }   
 
       @media screen and (max-width: 768px) {
         .sidenav {display: none;}
@@ -163,7 +175,7 @@
                         <br>
                         <input style="padding-bottom: 15%;" id="message" name='message' type="text" placeholder="Message" required/>
                         <br>
-                        <input class="submit" type="submit" name="signin" value="Sign In" class="btn btn-primary"></button>
+                        <input class="submit" type="submit" name="submit" value="Submit" class="btn btn-primary"></button>
                     </form>
 
             </div>
@@ -176,9 +188,19 @@
     </div>
     <div class="worktime"> 
             <p>237 W 54th St NY<br> New York 10019 </p>
-            <p>387 62 151 929 </p>
+            <p>+1 212-586-9700 </p>
             <p>firststeak@gmail.com</p>
-            <p>tablica radno vrijeme </p>
+            <table style="margin-left: 20%;">
+              <tr><th>Sunday</th><td>Closed</td></tr>
+              <tr><th>Monday</th><td>9am - 10pm</td></tr>
+              <tr><th>Tuesday</th><td>9am - 10pm</td></tr>
+              <tr><th>Wednesday&nbsp;&nbsp;</th><td>9am - 10pm</td></tr>
+            </table>
+          <table>
+            <tr><th>Thursday&nbsp;&nbsp;</th><td>9am - 10pm</td></tr>
+              <tr><th>Friday</th><td>9am - 11pm</td></tr>
+              <tr><th>Saturday</th><td>12am -11pm</td></tr>
+            </table>
      </div>
 
         
