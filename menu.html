@@ -9,39 +9,9 @@
     <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Aldrich&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reservation.css">
     <link rel="stylesheet" href="css/styles.css">
-    <style>
-          body {
-      background-color: #fff;
-    }
-
-  .sidenav {
-      margin-top: 2%;
-      height: 90%;
-      width: 7%;
-      position: fixed;
-      z-index: 1;
-      top: 0;
-      left: 0;
-      border-right:1px solid #71a1d1;
-      overflow-x: hidden;
-      float: left;
-    }
-    
-    .sidenav a {
-      padding-left: 15%;
-      text-decoration: none;
-      font-size: 1.5vw;
-      color: #b1c8bc;
-      display: block;
-      margin-top:9vw;
-    }
-    
-    .sidenav a:hover {
-      color: #81d0e8;
-      text-shadow: 2px 2px 5px rgb(185, 185, 185);
-    }
-    
+    <style>     
     main {
       margin-left:7%;
       width: 90%;
@@ -117,7 +87,7 @@
         border-top-left-radius: 1rem;
         border-top-right-radius: 1rem;
     }
-      
+
     @media screen and (max-width: 768px) {
         .sidenav {display: none;}
     }
@@ -136,7 +106,24 @@
         <div class="top"> 
             <p style="width:50%">Menu</p>
             <p style="font-size:2.125rem; border-bottom: 1px solid #71a1d1;">Steaks</p>              
-            <input type="button" class="reservation" value="Reservation">
+            <!-- Trigger/Open The Modal -->
+                <button  class="reservation" value="Reservation" id="myBtn">RESERVATION</button>
+
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <span class="close">&times;</span>
+                            <h2>Modal Header</h2>
+                        </div>
+                        <div class="modal-body">
+                            <p>Some text in the Modal Body</p>
+                            <p>Some other text...</p>
+                        </div>
+                    </div>
+                </div>
+
         </div>
         <div class="steaks-menu">
             <div class="steaks-card">
@@ -317,41 +304,41 @@
             <p style="font-size:2.125rem; border-bottom: 1px solid #71a1d1;color: #71a1d1; margin-left:-6.6%;">Side plate</p>
             <div class="steaks-card">
                 <div class="header">
-                    <img src="https://images.unsplash.com/photo-1607116176195-b81b1f41f536?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8ZmlsZXQlMjBtaWdub258ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60">
+                    <img src="https://images.unsplash.com/photo-1654921802159-9f1d368ed556?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80">
                 </div>
-            <h1 class="name">Tomahawk Steak</h1>
+            <h1 class="name">Fries</h1>
             <div class="border"></div>
                  <p class="info">This is one of the best steak you are going to try, you wont believe how delicious it is going to be for your mouth.</p>  
             </div> 
             <div class="steaks-card">
                 <div class="header">
-                    <img src="https://images.unsplash.com/photo-1607116176195-b81b1f41f536?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8ZmlsZXQlMjBtaWdub258ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60">
+                    <img src="https://images.unsplash.com/photo-1610631087218-f784839e48f1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8YmFrZWQlMjBwb3RhdG98ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60">
                 </div>
-            <h1 class="name">Tomahawk Steak</h1>
+            <h1 class="name">Potato</h1>
             <div class="border"></div>
                  <p class="info">This is one of the best steak you are going to try, you wont believe how delicious it is going to be for your mouth.</p>  
             </div> 
             <div class="steaks-card">
                 <div class="header">
-                    <img src="https://images.unsplash.com/photo-1607116176195-b81b1f41f536?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8ZmlsZXQlMjBtaWdub258ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60">
+                    <img src="https://images.unsplash.com/photo-1639024471283-03518883512d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fG9uaW9uJTIwcmluZ3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60">
                 </div>
-            <h1 class="name">Tomahawk Steak</h1>
+            <h1 class="name">Onion rings</h1>
             <div class="border"></div>
                  <p class="info">This is one of the best steak you are going to try, you wont believe how delicious it is going to be for your mouth.</p>  
             </div> 
             <div class="steaks-card">
                 <div class="header">
-                    <img src="https://images.unsplash.com/photo-1607116176195-b81b1f41f536?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8ZmlsZXQlMjBtaWdub258ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60">
+                    <img src="https://images.unsplash.com/photo-1516684732162-798a0062be99?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cmljZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60">
                 </div>
-            <h1 class="name">Tomahawk Steak</h1>
+            <h1 class="name">Rice</h1>
             <div class="border"></div>
                  <p class="info">This is one of the best steak you are going to try, you wont believe how delicious it is going to be for your mouth.</p>  
             </div> 
             <div class="steaks-card">
                 <div class="header">
-                    <img src="">
+                    <img src="https://buildyourbite.com/wp-content/uploads/2019/04/roasted-potatoes-and-onions-recipe-5.jpg">
                 </div>
-            <h1 class="name">Tomahawk Steak</h1>
+            <h1 class="name">Roasted</h1>
             <div class="border"></div>
                  <p class="info">This is one of the best steak you are going to try, you wont believe how delicious it is going to be for your mouth.</p>  
             </div>    
@@ -361,6 +348,32 @@
         </div> 
 
     </main>	   
-    
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+        
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+        
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+        
+        // When the user clicks the button, open the modal 
+        btn.onclick = function() {
+          modal.style.display = "block";
+        }
+        
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+          modal.style.display = "none";
+        }
+        
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+        </script>
 </body>
 </html> 
