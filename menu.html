@@ -91,6 +91,71 @@
     @media screen and (max-width: 768px) {
         .sidenav {display: none;}
     }
+
+
+
+
+
+    .contact{
+        margin-left: 50%;
+        width:50%;
+        height: auto;
+      }
+      .contact-form{
+
+      }
+      input[type="text"]
+    {
+        background: transparent;
+        display: block;
+        padding: .8em 1em;
+        border: 1px solid #71a1d1;
+        border-radius: .375em;
+        transition: .2s ease-out;
+    }
+    input[type="email"]
+    {
+        background: transparent;
+        display: block;
+        padding: .8em 1em;
+        width: 20%;
+        border: 1px solid #71a1d1;
+        border-radius: .375em;  
+        transition: .2s ease-out;       
+        float: left; 
+    }
+    input[type="datetime-local"]
+    {
+        background: transparent;
+        display: block;
+        padding: .8em 1em;
+        border: 1px solid #71a1d1;
+        border-radius: .375em;
+        transition: .2s ease-out;
+        width: 20%;
+        clear: both;
+    }
+    input[type="submit"]
+    {
+        background: transparent;
+        display: block;
+        padding: .8em 1em;
+        width: 10.5%;
+        border: 1px solid #71a1d1;
+        border-radius: .375em;  
+        transition: .6s ease-out;  
+        color: #426e9a;  
+        margin-left: 46%;
+        margin-top: 10%;
+    }
+    input:focus {
+        border: 1.5px solid #426e9a !important;
+        outline: none;
+    }
+    .submit:hover {
+        color: #b1c8bc;
+        background:#426e9a;
+    }
       </style>
 </head>
 <body>
@@ -118,9 +183,22 @@
                             <h2>Modal Header</h2>
                         </div>
                         <div class="modal-body">
-                            <p>Some text in the Modal Body</p>
-                            <p>Some other text...</p>
+                            <h2>Modal HeaderHea derHeaderH eaderH eader HeaderHead erHeaderHeade rHeaderHeader HeaderH eaderHeader</h2>
                         </div>
+                            <div class="contact">
+                                <div class="contact-form">
+                                        <form method="" action="">
+                                            <input style="width:8%; float:left;" id="name" name='name' type="text" placeholder="Name" required/>
+                                            <input style="width:8%; float:left;margin-left: 1%;" id="surname" name='surname' type="text" placeholder="Surname" required/>
+                                            <input style="" id="message" name='message' type="datetime-local" placeholder="Message" required/>
+                                            <input id="mail" name='mail' type="email" placeholder="Email" required/>
+                                            <br>
+                                            <input class="submit" type="submit" name="submit" value="Submit" class="btn btn-primary">
+                                        </form>
+                    
+                                </div>
+                            </div>
+                        
                     </div>
                 </div>
 
