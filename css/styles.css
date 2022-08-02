@@ -13,6 +13,7 @@ body {
     border-right:1px solid #71a1d1;
     overflow-x: hidden;
     float: left;
+    overflow: hidden;
   }
   
   .sidenav a {
