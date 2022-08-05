@@ -97,31 +97,35 @@
 
 
     .contact{
-        margin-left: 4vw;
+        margin-left: 3vw;
         height: auto;
       }
-      .contact-form{
-
+      .contact-form p{
+        margin-top: -7vw;
+        font-size: 2rem;
       }
       input[type="text"]
     {
+        text-transform: capitalize;
         background: transparent;
         display: block;
         padding: .8em 1em;
         border: 1px solid #71a1d1;
         border-radius: .375em;
         transition: .2s ease-out;
+        margin-top: 1vw;
     }
     input[type="email"]
     {
         background: transparent;
         display: block;
         padding: .8em 1em;
-        width: 20%;
+        width: 16.4vw;
         border: 1px solid #71a1d1;
         border-radius: .375em;  
         transition: .2s ease-out;       
         float: left; 
+        margin-top: 1%;
     }
     input[type="datetime-local"]
     {
@@ -131,21 +135,22 @@
         border: 1px solid #71a1d1;
         border-radius: .375em;
         transition: .2s ease-out;
-        width: 20%;
+        width: 16.4vw;
         clear: both;
+        margin-top: 1%;
     }
     input[type="submit"]
     {
         background: transparent;
         display: block;
         padding: .8em 1em;
-        width: 10.5%;
+        width: 7vw;
         border: 1px solid #71a1d1;
         border-radius: .375em;  
         transition: .6s ease-out;  
         color: #426e9a;  
-        margin-left: 46%;
-        margin-top: 10%;
+        margin-left: 75%;
+        margin-top: 7.5vw;
     }
     input:focus {
         border: 1.5px solid #426e9a !important;
@@ -196,7 +201,7 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <span class="close">&times;</span>
-                            <h2>Reservation</h2>
+                            <h2 style="margin-left: 2vw;">Reservation</h2>
                         </div>
                         <div class="modal-body">
                         
@@ -204,11 +209,11 @@
                             <div class="contact">
                                 <div class="contact-form">
                                         <form method="" action="">
-                                            <input style="width:8%; float:left;" id="name" name='name' type="text" placeholder="Name" required/>
-                                            <input style="width:8%; float:left;margin-left: 1%;" id="surname" name='surname' type="text" placeholder="Surname" required/>
+                                            <input style="width:7vw; float:left;" id="name" name='name' type="text" placeholder="Name" required/>
+                                            <input style="width:7vw; float:left;margin-left: .5vw;" id="surname" name='surname' type="text" placeholder="Surname" required/>
                                             <input id="message" name='message' type="datetime-local" placeholder="Message" required/>
                                             <input id="mail" name='mail' type="email" placeholder="Email" required/>
-                                            <br><p>Meals ordered: <a id="clicks">0</a></p>
+                                            <p>Meals ordered: <a id="clicks">0</a></p>
                                             <input class="submit" type="submit" name="submit" value="Submit" class="btn btn-primary">
                                         </form>
                     
