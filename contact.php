@@ -165,8 +165,8 @@ if(isset($_GET['action'])=='submitfunc') {
     <nav>
     <div class="sidenav">
         <a href="index.html">About</a>
-        <a href="menu.html">Menu</a>
-        <a href="#">Contact</a>
+        <a href="menu.php">Menu</a>
+        <a href="contact.php">Contact</a>
       </div>
     </nav>
 
@@ -181,7 +181,7 @@ if(isset($_GET['action'])=='submitfunc') {
                         <br>
                         <input style="padding-bottom: 6vw;" id="message" name='question' type="text" placeholder="Message" required/>
                         <br>
-                        <button type="submit"  class="submit" value="Upload" name="submit">Upload</button>
+                        <button type="submit"  class="submit" value="Upload" name="submit">Send</button>
                     </form>
 
             </div>

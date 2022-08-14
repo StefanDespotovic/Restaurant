@@ -130,7 +130,7 @@
         margin-top: 1%;
         clear: both;
     }
-    input[type="datetime-local"]
+    input[type="date"]
     {
         background: transparent;
         display: inline-block;
@@ -138,22 +138,36 @@
         border: 1px solid #71a1d1;
         border-radius: .375em;
         transition: .2s ease-out;
-        width: 16.4vw;
+        width: 7vw;
         clear: both;
         margin-top: 1%;
         float: left;
     }
-    input[type="submit"]
+    input[type="time"]
+    {
+        background: transparent;
+        display: inline-block;
+        padding: .8em 1em;
+        border: 1px solid #71a1d1;
+        border-radius: .375em;
+        transition: .2s ease-out;
+        width: 7vw;
+        margin-top: 1%;
+        float: left;
+        margin-left: .5vw;
+
+    }
+    .submit
     {
         background: transparent;
         display: block;
         padding: .8em 1em;
-        width: 7vw;
+        width: 8vw;
         border: 1px solid #71a1d1;
         border-radius: .375em;  
         transition: .6s ease-out;  
         color: #426e9a;  
-        margin-left: 75%;
+        margin-left: 7.4vw;
         margin-top: 3.5vw;
     }
     input:focus {
@@ -183,12 +197,18 @@
     }
       </style>
 </head>
+<?php
+if(isset($_GET['action'])=='submitfunc') {
+  submitfunc();
+}else
+//show form
+?>
 <body>
     <nav>
     <div class="sidenav">
         <a href="index.html">About</a>
-        <a href="menu.html">Menu</a>
-        <a href="contact.html">Contact</a>
+        <a href="menu.php">Menu</a>
+        <a href="contact.php">Contact</a>
       </div>
     </nav>
 
@@ -212,15 +232,16 @@
                         </div>
                             <div class="contact">
                                 <div class="contact-form">
-                                        <form method="" action="">
+                                        <form action="?action=submitfunc" method="post" enctype="multipart/form-data">
                                             <input style="width:7vw; float:left;" id="name" name='name' type="text" placeholder="Name" required/>
                                             <input style="width:7vw; float:left;margin-left: .5vw;" id="surname" name='surname' type="text" placeholder="Surname" required/>
-                                            <input id="date" name='date' type="datetime-local" placeholder="datetime" required/>
-                                            <input id="mail" name='mail' type="email" placeholder="Email" required/>
+                                            <input id="date" name='date' type="date" placeholder="date" min="<?php echo date("Y-m-d"); ?>" required/>
+                                            <input id="date" name='time' type="time" placeholder="date" required/>
+                                            <input id="mail" name='email' type="email" placeholder="Email" required/>
                                         <div style="position:absolute; margin-left: 18vw">
-                                            <p>Meals ordered: <a id="clicks">0</a></p>
-                                            <p>Total: $<a id="firstValue">0</a></p>
-                                            <input class="submit" type="submit" name="submit" value="Submit" class="btn btn-primary">
+                                            <p>Meals ordered: <a name='mealsNum' id="clicks">0</a></p>
+                                            <p>Total: $<a name='Total' id="firstValue">0</a></p>
+                                            <button type="submit"  class="submit" value="Upload" name="submit">Reserve</button>
                                         </div>
                                         </form>
                     
@@ -480,6 +501,7 @@
         </div> 
 
     </main>	   
+
     <script>
         // Get the modal
         var modal = document.getElementById("myModal");
@@ -530,6 +552,33 @@ document.getElementById("sum").innerText=document.getElementById("sum").innerTex
         var fValue = document.getElementById("firstValue");
         firstValue.innerHTML = parseInt(fValue.innerHTML) + parseInt(secondValue);
     }
+
+    
         </script>
+
 </body>
+<?php
+function submitfunc() {
+    include 'config.php';
+  // sending given files to db 
+  if(isset($_POST["submit"])){
+     $name = $_POST['name'];
+     $surname = $_POST['surname'];
+     $date = $_POST['date'];
+     $time = $_POST['time'];
+     $email = $_POST['email'];
+  //   $mealsNum = $_POST['mealsNum'];
+   //  $Total = $_POST['Total'];
+     
+}
+$insert = $db->query("INSERT into reservation (name, surname, date, time, email) VALUES ('$name','$surname','$date','$time','$email')");
+if($insert){
+  echo "<script type='text/javascript'>alert('Successful')</script>";
+   // header("Location: login.php");
+} else
+{
+    echo "error";
+} }
+
+?>
 </html> 
