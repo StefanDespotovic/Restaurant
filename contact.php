@@ -51,7 +51,6 @@
         width: 29.5vw;
         border: 1px solid #71a1d1;
         border-radius: .375em;  
-        margin-top: 7vw;
         transition: .2s ease-out;    
     }
     .submit
@@ -99,7 +98,7 @@
       }
       .worktime {
         margin-left:7vw;
-        margin-top: 14vw;
+        margin-top: 27vh;
         width: 90%;
         float:left;
         height: 50%;
@@ -148,7 +147,7 @@
       margin-left: 0;
     }
     .worktime{
-      margin-top: 26vw;
+      margin-top: 26vh;
     }
 
 }
@@ -177,7 +176,7 @@ if(isset($_GET['action'])=='submitfunc') {
                         <p style="width:50%">Questions or comments?</p>
                         <input style="width:12.5vw; float:left;" id="name" name='name' type="text" placeholder="Name" required/>
                         <input style="width:12.5vw; float:left;" class="surname" id="surname" name='surname' type="text" placeholder="Surname" required/>
-                        <input id="mail" name='email' type="email" placeholder="Email" required/>
+                        <br><br><br><input id="mail" name='email' type="email" placeholder="Email" required/>
                         <br>
                         <input style="padding-bottom: 6vw;" id="message" name='question' type="text" placeholder="Message" required/>
                         <br>

@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=Aldrich&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/reservation.css">
     <link rel="stylesheet" href="css/styles.css">
+
     <style>   
     
 
@@ -33,7 +34,7 @@
         transition: .6s ease-out;  
         color: #426e9a;  
         margin-left: 76%;
-        margin-top: -10.5vw;
+        margin-top: -20.5vh;
     }
     .reservation:hover {
         color: #b1c8bc;
@@ -115,7 +116,7 @@
         border: 1px solid #71a1d1;
         border-radius: .375em;
         transition: .2s ease-out;
-        margin-top: 1.5vw;
+        margin-top: 3.5vh;
     }
     input[type="email"]
     {
