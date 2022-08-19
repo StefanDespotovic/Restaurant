@@ -17,12 +17,11 @@
         height: 50%;
       }
       a {
-    padding-left: 75vw;
+    padding-left: 72vw;
     text-decoration: none;
-    font-size: 1.5vw;
     color: #71a1d1;
     display: block;
-    margin-top: -3vw;
+    margin-top: -3.5vw;
   }
         
         @media screen and (max-width: 768px) {
@@ -47,7 +46,7 @@
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: #04AA6D;
+  background-color: #71a1d1;
   color: white;
 }
 </style>
@@ -63,10 +62,10 @@
 
       <main>	
       
-
+ 
 
 <h1>Questions panel</h1>
-<a href="userpanel.php">Reservation panel</a>
+<h1><a href="userpanel.php">Reservation panel</a></h1>
 <table id="customers">
   <tr>
     <th>ID</th>

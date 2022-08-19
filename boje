@@ -2,3 +2,5 @@
 https://unsplash.com/s/photos/steak-tomahawk
 https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal2
 https://htmldom.dev/sort-a-table-by-clicking-its-headers/ sortiranje
+
+delete from table_name where column_name < DATE_SUB(NOW() , INTERVAL 1 DAY) sql for delete everything older than today

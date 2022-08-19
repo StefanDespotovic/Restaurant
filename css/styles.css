@@ -4,7 +4,7 @@ body {
 
 
 .sidenav {
-    height: 100%;
+    height: 100%; 
     width: 7%;
     position: fixed;
     z-index: 1;
@@ -23,7 +23,7 @@ body {
     font-size: 1.5vw;
     color: #71a1d1;
     display: block;
-    margin-top: 11vh;
+    margin-top: 21.5vh;
   }
   
   .sidenav a:hover {
@@ -31,3 +31,19 @@ body {
     text-shadow: 2px 2px 5px rgb(185, 185, 185);
   }
   
+
+  .worktime {
+    margin-left:7vw;
+    margin-top: 27vh;
+    width: 90%;
+    float:left;
+    height: 50%;
+  }
+  .worktime p {
+    display: inline-block;
+    vertical-align: top;
+    font-size:1.125rem;
+    color: #71a1d1;
+    padding-left: 5%;
+  }
+

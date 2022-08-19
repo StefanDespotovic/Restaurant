@@ -54,7 +54,7 @@
         transition: .5s ease-out;
         display: inline-block;
         vertical-align: top;
-        border-radius: 1rem;
+        border-radius: 1rem; 
     }
     .steaks-card:hover {
         box-shadow: 0px 0px 21px -3px black;
@@ -196,6 +196,23 @@
         color: #b1c8bc;
         background:#426e9a;
     }
+
+    .worktime {
+    margin-top: 7vh;
+    margin-left: 9vw;
+  }
+    table{
+        display: inline-block;
+        vertical-align: top;
+    }
+    th {
+        display: inline-block;
+        vertical-align: top;
+        font-size:1.125rem;
+        color: #71a1d1;
+        padding-left: 5%;
+        text-align: right;  
+    }   
       </style>
 </head>
 <?php
@@ -213,7 +230,7 @@ if(isset($_GET['action'])=='submitfunc') {
       </div>
     </nav>
 
-    <main>
+    <main style="border-bottom: 1px solid #71a1d1;">
         <div class="top"> 
             <p style="width:50%">Menu</p>
             <p style="font-size:2.125rem; border-bottom: 1px solid #71a1d1;">Steaks</p>              
@@ -502,6 +519,22 @@ if(isset($_GET['action'])=='submitfunc') {
         </div> 
 
     </main>	   
+    <div class="worktime"> 
+            <p>237 W 54th St NY<br> New York 10019 </p>
+            <p>+1 212-586-9700 </p>
+            <p>firststeak@gmail.com</p> 
+            <table class="table" style="margin-left: 20%;">
+              <tr><th>Sunday</th><td>Closed</td></tr>
+              <tr><th>Monday</th><td>9am - 10pm</td></tr>
+              <tr><th>Tuesday</th><td>9am - 10pm</td></tr>
+              <tr><th>Wednesday&nbsp;&nbsp;</th><td>9am - 10pm</td></tr>
+            </table>
+          <table>
+            <tr><th>Thursday&nbsp;&nbsp;</th><td>9am - 10pm</td></tr>
+              <tr><th>Friday</th><td>9am - 11pm</td></tr>
+              <tr><th>Saturday</th><td>12am -11pm</td></tr>
+            </table>
+     </div>
 
     <script>
         // Get the modal
@@ -530,31 +563,26 @@ if(isset($_GET['action'])=='submitfunc') {
           }
         }
 
-
-
         // Clicks counter
         var clicks = 0;
-
-function onClick() {
-  clicks += 1;
-  document.getElementById("clicks").innerHTML = clicks;
-};
-
-
-
-function sum(){
-document.getElementById("sum").innerText=document.getElementById("sum").innerText*1+event.target.innerText*1;
-  }
+            function onClick() {
+            clicks += 1;
+            document.getElementById("clicks").innerHTML = clicks;
+            };
 
 
 
+            function sum(){
+            document.getElementById("sum").innerText=document.getElementById("sum").innerText*1+event.target.innerText*1;
+            }
 
-  function addTheValue(secondValue) {
-        var fValue = document.getElementById("firstValue");
-        firstValue.innerHTML = parseInt(fValue.innerHTML) + parseInt(secondValue);
-    }
 
-    
+
+
+        function addTheValue(secondValue) {
+                var fValue = document.getElementById("firstValue");
+                firstValue.innerHTML = parseInt(fValue.innerHTML) + parseInt(secondValue);
+            }
         </script>
 
 </body>

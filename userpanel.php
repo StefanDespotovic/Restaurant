@@ -11,7 +11,7 @@
       <link href="https://fonts.googleapis.com/css?family=Aldrich&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="css/styles.css">
       <style>
-      main {
+      main { 
         margin-left:7%;
         width: 90%;
         height: 50%;
@@ -19,10 +19,9 @@
       a {
     padding-left: 75vw;
     text-decoration: none;
-    font-size: 1.5vw;
     color: #71a1d1;
     display: block;
-    margin-top: -3vw;
+    margin-top: -3.5vw;
   }
         
         @media screen and (max-width: 768px) {
@@ -47,7 +46,7 @@
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: #04AA6D;
+  background-color: #71a1d1;
   color: white;
 }
 </style>
@@ -55,7 +54,7 @@
   <body>
       <nav>
       <div class="sidenav">
-          <a href="menu.html">About</a>
+          <a href="index.html">About</a>
           <a href="menu.php">Menu</a>
           <a href="contact.php">Contact</a>
         </div>
@@ -66,7 +65,7 @@
 
 
 <h1>Reservation panel</h1>
-<a href="userpanel2.php">Questions panel</a>
+<h1><a href="userpanel2.php">Questions panel</a></h1>
 <table id="customers">
   <tr>
     <th>ID</th>
@@ -111,7 +110,13 @@
 
           
       </main>	
+
+      
   </body>
   </html> 
+
+
+
+
 
 

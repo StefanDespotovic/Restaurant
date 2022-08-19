@@ -96,20 +96,6 @@
         box-shadow: 0 3px 10px rgba(0,0,0,.2);
         transform: translate3d(0,-2px,0);
       }
-      .worktime {
-        margin-left:7vw;
-        margin-top: 27vh;
-        width: 90%;
-        float:left;
-        height: 50%;
-      }
-      .worktime p {
-        display: inline-block;
-        vertical-align: top;
-        font-size:1.125rem;
-        color: #71a1d1;
-        padding-left: 5%;
-      }
       table{
         display: inline-block;
         vertical-align: top;
@@ -191,10 +177,14 @@ if(isset($_GET['action'])=='submitfunc') {
           &q=Empire+Steak+House,New+York+NY">
       </iframe>
     </div>
+   
+
+        
+    </main>	
     <div class="worktime"> 
             <p>237 W 54th St NY<br> New York 10019 </p>
             <p>+1 212-586-9700 </p>
-            <p>firststeak@gmail.com</p>
+            <p>firststeak@gmail.com</p> 
             <table class="table" style="margin-left: 20%;">
               <tr><th>Sunday</th><td>Closed</td></tr>
               <tr><th>Monday</th><td>9am - 10pm</td></tr>
@@ -207,9 +197,6 @@ if(isset($_GET['action'])=='submitfunc') {
               <tr><th>Saturday</th><td>12am -11pm</td></tr>
             </table>
      </div>
-
-        
-    </main>	
 </body>
 <?php
 function submitfunc() {
