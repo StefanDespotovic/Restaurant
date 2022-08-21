@@ -49,6 +49,13 @@
   background-color: #71a1d1;
   color: white;
 }
+td a{
+  padding-left: 0vw;
+    text-decoration: none;
+    color: #71a1d1;
+    display: block;
+    margin-top: 0vw;
+}
 </style>
   </head>
   <body>
@@ -73,6 +80,7 @@
     <th>Surname</th>
     <th>Email</th>
     <th>Question</th>
+    <th>Delete</th>
   </tr>
   <?php
 	
@@ -97,6 +105,7 @@
     <td><?php echo $surname?></td>
     <td><?php echo $email?></td>
     <td><?php echo $question?></td>
+    <td><a href="delete.php?id=<?php echo $rows['id']; ?>">Delete</a></td>
   </tr>
   <?php
 	}

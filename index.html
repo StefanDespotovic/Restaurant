@@ -16,6 +16,20 @@
         width: 90%;
         height: 50%;
       }
+      .food-rotate{
+        margin-left: 55vw;
+        margin-top: 8vh;
+        width: 30vw;
+      }
+      .food-rotate img{
+        width: 80%;
+        height: auto;
+        max-height: none;
+        transition: transform .7s ease-in-out;
+      }
+      .food-rotate img:hover {
+        transform: rotate(45deg);
+      }
         
         @media screen and (max-width: 768px) {
           .sidenav {display: none;}
@@ -32,9 +46,40 @@
       </nav>
 
       <main>	
+<div class="food-rotate">
+  <img src="images/steak.png">
+</div>
 
+        <div class="steaks-menu">
+          <div class="steaks-card">
+              <div class="header">
+                  <img src="https://images.unsplash.com/photo-1607116176195-b81b1f41f536?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8ZmlsZXQlMjBtaWdub258ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60">
+              </div>
+          <h1 class="name">Tenderloin</h1>
+          <div class="border"></div>
+               <p class="info">Known as an eye fillet in Australia, filet in France, filé mignon in Brazil, is cut from the loin of beef. </p>  
+               <button class="order" type="button" onClick="onClick();addTheValue(25);">$25</button>
 
-        <div class="card-container">
+              </div> 
+
+          <div class="steaks-card">
+              <div class="header">
+                  <img src="https://images.unsplash.com/photo-1602216475919-37336ceb4ad3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjB8fHRib25lJTIwc3RlYWt8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60">
+              </div>
+          <h1 class="name">T-bone</h1>
+          <div class="border"></div>
+               <p class="info">Steaks of beef cut from the loin. They include a T shaped lumbar with sections of internal oblique muscle.</p>  
+               <button class="order" type="button" onClick="onClick();addTheValue(22);">$22</button>
+          </div> 
+
+          <div class="steaks-card">
+              <div class="header">
+                  <img src="https://images.unsplash.com/photo-1432139509613-5c4255815697?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fHN0ZWFrJTIwcmliZXllfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60">
+              </div>
+          <h1 class="name">Tomahawk</h1>
+          <div class="border"></div>
+          <p class="info">Essentially known as the ribeye beef steak specifically cut with at least five inches of rib bone left intact.</p>  
+          <button class="order" type="button" onClick="onClick();addTheValue(22);">$22</button>
           
         </div>
 

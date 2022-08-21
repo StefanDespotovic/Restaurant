@@ -13,92 +13,11 @@
     <link rel="stylesheet" href="css/styles.css">
 
     <style>   
-    
-
-    main {
-      margin-left:7%;
-      width: 90%;
-      height: auto;
-    }
-    .top p{
-        font-size:3.125rem;
-        color: #71a1d1;
-      }
-    .reservation{
-        background: transparent;
-        display: block;
-        padding: .8em 1em;
-        width: 10.5%;
-        border: 1px solid #71a1d1;
-        border-radius: .375em;  
-        transition: .6s ease-out;  
-        color: #426e9a;  
-        margin-left: 76%;
-        margin-top: -20.5vh;
-    }
-    .reservation:hover {
-        color: #b1c8bc;
-        background:#426e9a;
-    }
-    .steaks-menu {
-        width: 90%;
-        height: auto;
-        margin-top:10%;
-        margin-left: 6%;
-    }
-    .steaks-card {
-        background: #f2f2f2;
-        max-width: 13rem;
-        position: relative;
-        margin: 20px;
-        transition: .5s ease-out;
-        display: inline-block;
-        vertical-align: top;
-        border-radius: 1rem; 
-    }
-    .steaks-card:hover {
-        box-shadow: 0px 0px 21px -3px black;
-    }
-    .header {
-        min-height: 250px;
-        opacity: 0.9;
-        background-size: cover;
-   }
-   .name {
-        font-size: 1.3em;
-        text-align: center;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        padding: 15px;
-        color:#71a1d1;
-   }
-    .border {
-        border: #426e9a 2px solid;
-        position: relative;
-        margin: 0 auto;
-        width: 50%;
-    }
-    .info {
-        margin-top: -10px;
-        font-weight: 700;
-        letter-spacing: 0.1em;
-        padding: 30px;
-    }
-    img{
-        width: 100%;
-        max-height: 14rem;
-        border-top-left-radius: 1rem;
-        border-top-right-radius: 1rem;
-    }
 
     @media screen and (max-width: 768px) {
         .sidenav {display: none;}
     }
-
-
-
-
-
+    
     .contact{
         margin-left: 3vw;
         height: auto;
@@ -163,7 +82,6 @@
         background: transparent;
         display: block;
         padding: .8em 1em;
-        width: 8vw;
         border: 1px solid #71a1d1;
         border-radius: .375em;  
         transition: .6s ease-out;  
@@ -254,7 +172,7 @@ if(isset($_GET['action'])=='submitfunc') {
                                             <input style="width:7vw; float:left;" id="name" name='name' type="text" placeholder="Name" required/>
                                             <input style="width:7vw; float:left;margin-left: .5vw;" id="surname" name='surname' type="text" placeholder="Surname" required/>
                                             <input id="date" name='date' type="date" placeholder="date" min="<?php echo date("Y-m-d"); ?>" required/>
-                                            <input id="date" name='time' type="time" placeholder="date" required/>
+                                            <input id="date" name='time'  min="09:00" max="23:00" type="time" placeholder="date" required/>
                                             <input id="mail" name='email' type="email" placeholder="Email" required/>
                                         <div style="position:absolute; margin-left: 18vw">
                                             <p>Meals ordered: <a name='mealsNum' id="clicks">0</a></p>
