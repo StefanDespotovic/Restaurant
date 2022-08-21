@@ -13,6 +13,11 @@
     <link rel="stylesheet" href="css/styles.css">
 
     <style>   
+  main {
+    margin-left:7%;
+    width: 90%;
+    height: auto;
+  }
 
     @media screen and (max-width: 768px) {
         .sidenav {display: none;}

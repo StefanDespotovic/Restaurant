@@ -16,13 +16,14 @@
         width: 90%;
         height: 50%;
       }
-      a {
+      h1 a {
     padding-left: 72vw;
     text-decoration: none;
-    color: #71a1d1;
     display: block;
     margin-top: -3.5vw;
+    animation: blink 1s infinite
   }
+  @keyframes blink { 0%{ color:#71a1d1; } 100%{ color:#81d0e8; } }
         
         @media screen and (max-width: 768px) {
           .sidenav {display: none;}
@@ -61,7 +62,7 @@ td a{
   <body>
       <nav>
       <div class="sidenav">
-          <a href="menu.html">About</a>
+          <a href="index.html">About</a>
           <a href="menu.php">Menu</a>
           <a href="contact.php">Contact</a>
         </div>

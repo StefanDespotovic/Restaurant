@@ -16,14 +16,15 @@
         width: 90%;
         height: 50%;
       }
-      a {
+     h1 a {
     padding-left: 75vw;
     text-decoration: none;
-    color: #71a1d1;
     display: block;
     margin-top: -3.5vw;
+    animation: blink 1s infinite
   }
-        
+  @keyframes blink { 0%{ color:#71a1d1; } 100%{ color:#81d0e8; } }
+  
         @media screen and (max-width: 768px) {
           .sidenav {display: none;}
         }
@@ -49,6 +50,7 @@
   background-color: #71a1d1;
   color: white;
 }
+
 </style>
   </head>
   <body>
@@ -101,6 +103,7 @@
     <td><?php echo $time?></td>
     <td><?php echo $email?></td>
   </tr>
+  <a href="checkold.php?id=<?php echo $rows['id']; ?>">DELETE OLD RESERVATIONS</a> 
   <?php
 	}
 ?>
