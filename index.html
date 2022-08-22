@@ -10,16 +10,156 @@
       <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Aldrich&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="css/styles.css">
+      <link rel="stylesheet" href="css/reservation.css">
       <style>
       main {
         margin-left:7%;
         width: 90%;
         height: 50%;
       }
+      .top{
+        margin-top:15%
+      }
+      input[type="text"]
+    {
+        text-transform: capitalize;
+        background: transparent;
+        display: block;
+        padding: .8em 1em;
+        border: 1px solid #71a1d1;
+        border-radius: .375em;
+        transition: .2s ease-out;
+        margin-top: 3.5vh;
+    }
+    input[type="email"]
+    {
+        background: transparent;
+        display: inline-block;
+        padding: .8em 1em;
+        width: 16.4vw;
+        border: 1px solid   #71a1d1;
+        border-radius: .375em;  
+        transition: .2s ease-out;       
+        float: left;    
+        margin-top: 1%;
+        clear: both;
+    }
+    input[type="date"]
+    {
+        background: transparent;
+        display: inline-block;
+        padding: .8em 1em;
+        border: 1px solid #71a1d1;
+        border-radius: .375em;
+        transition: .2s ease-out;
+        width: 7vw;
+        clear: both;
+        margin-top: 1%;
+        float: left;
+    }
+    input[type="time"]
+    {
+        background: transparent;
+        display: inline-block;
+        padding: .8em 1em;
+        border: 1px solid #71a1d1;
+        border-radius: .375em;
+        transition: .2s ease-out;
+        width: 7vw;
+        margin-top: 1%;
+        float: left;
+        margin-left: .5vw;
+
+    }
+    .submit
+    {
+        background: transparent;
+        display: block;
+        padding: .8em 1em;
+        border: 1px solid #71a1d1;
+        border-radius: .375em;  
+        transition: .6s ease-out;  
+        color: #426e9a;  
+        margin-left: 7.4vw;
+        margin-top: 3.5vw;
+    }
+    input:focus {
+        border: 1.5px solid #426e9a !important;
+        outline: none;
+    }
+    .submit:hover {
+        color: #b1c8bc;
+        background:#426e9a;
+    }
+      .meal{
+        float: left;
+        position: absolute;        
+      }
+      .mealoftheday{
+        background-color:#E8E8E8;
+        width:53%;
+        float: left;
+        border-radius: 1rem;
+        margin-top: 7.5vh;
+        transition: transform .5s ease-in-out;
+      }
+      .mealoftheday:hover {
+      box-shadow: 0px 0px 21px -3px rgb(110, 109, 109);
+      transform: scale(1.01);
+  }
+      .meal h1{
+        font-size:3.125rem;
+        color: #71a1d1;
+        margin-left: 1vw;
+      }
+      .meal h2{
+        font-size:2rem;
+        color: #71a1d1;
+        margin-top:-4vh;
+        margin-left: 1vw;
+      }
+      .meal .order{
+        background: transparent;
+        display: block;
+        padding: .5em .4em;
+        width: 3vw !important;
+        border: 1px solid #71a1d1;
+        border-radius: .375em;  
+        transition: .6s ease-out;  
+        color: #426e9a;  
+        margin-left: 15vw !important;
+        margin-top: 0% !important;
+        position: absolute;
+    }
+      .order{
+        background: transparent;
+        display: block;
+        padding: .5em .4em;
+        width: 22.5%;
+        border: 1px solid #71a1d1;
+        border-radius: .375em;  
+        transition: .6s ease-out;  
+        color: #426e9a;  
+        margin-left: 68%;
+        margin-top: -18%;
+        position: absolute;
+    }
+    .order:hover {
+        color: #b1c8bc;
+        background:#426e9a;
+    }
+    .meal .info {
+      margin-top: -10px;
+      width: 18vw;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      padding: 30px;
+  }
       .food-rotate{
-        margin-left: 55vw;
-        margin-top: 8vh;
+        margin-left: 20vw;
+        margin-top: 6vh;
         width: 30vw;
+        float:left;
       }
       .food-rotate img{
         width: 80%;
@@ -28,7 +168,7 @@
         transition: transform .7s ease-in-out;
       }
       .food-rotate img:hover {
-        transform: rotate(45deg) scale(1.1);
+        transform: rotate(30deg) scale(1.1);
       }
         
         @media screen and (max-width: 768px) {
@@ -46,12 +186,56 @@
       </nav>
 
       <main>	
+        <div class="top"> 
+        <button  class="reservation" value="Reservation" id="myBtn">RESERVATION</button>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h2 style="margin-left: 2vw;">Reservation</h2>
+                </div>
+                <div class="modal-body">
+                
+                </div>
+                    <div class="contact">
+                        <div class="contact-form">
+                                <form action="?action=submitfunc" method="post" enctype="multipart/form-data">
+                                    <input style="width:7vw; float:left;" id="name" name='name' type="text" placeholder="Name" required/>
+                                    <input style="width:7vw; float:left;margin-left: .5vw;" id="surname" name='surname' type="text" placeholder="Surname" required/>
+                                   <input id="date" name='date' type="date" placeholder="date" min="<?php echo date("Y-m-d"); ?>" required/>
+                                    <input id="date" name='time'  min="09:00" max="23:00" type="time" placeholder="date" required/>
+                                    <input id="mail" name='email' type="email" placeholder="Email" required/>
+                                <div style="position:absolute; margin-left: 18vw">
+                                    <p>Meals ordered: <a name='mealsNum' id="clicks">0</a></p>
+                                    <p>Total: $<a name='Total' id="firstValue">0</a></p>
+                                    <button type="submit"  class="submit" value="Upload" name="submit">Reserve</button>
+                                </div>
+                                </form>
+            
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+      </div>
+
+        <div class="mealoftheday">
+        <div class="meal">
+          <h1>Meal of the day</h1>
+          <h2>Tenderloin Steak</h2>
+          <div class="border"></div>
+          <p class="info">Known as an eye fillet in Australia, filet in France, filé mignon in Brazil, is cut from the loin of beef. </p>
+          <button class="order" type="button" onClick="onClick();addTheValue(25);">$25</button>
+        </div>
 <div class="food-rotate">
   <img src="images/steak.png">
-</div>
+</div></div>
 
-        <div class="steaks-menu">
-          <div class="steaks-card">
+        <div style="margin-top: 5vh;" class="steaks-menu">
+          <div style="margin-left: 2.5vw;" class="steaks-card">
               <div class="header">
                   <img src="https://images.unsplash.com/photo-1607116176195-b81b1f41f536?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8ZmlsZXQlMjBtaWdub258ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60">
               </div>
@@ -85,5 +269,56 @@
 
           
       </main>	
+
+      
+    <script>
+      // Get the modal
+      var modal = document.getElementById("myModal");
+      
+      // Get the button that opens the modal
+      var btn = document.getElementById("myBtn");
+      
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+      
+      // When the user clicks the button, open the modal 
+      btn.onclick = function() {
+        modal.style.display = "block";
+      }
+      
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function() {
+        modal.style.display = "none";
+      }
+      
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+
+      // Clicks counter
+      var clicks = 0;
+          function onClick() {
+          clicks += 1;
+          document.getElementById("clicks").innerHTML = clicks;
+          };
+
+
+
+          function sum(){
+          document.getElementById("sum").innerText=document.getElementById("sum").innerText*1+event.target.innerText*1;
+          }
+
+
+
+
+      function addTheValue(secondValue) {
+              var fValue = document.getElementById("firstValue");
+              firstValue.innerHTML = parseInt(fValue.innerHTML) + parseInt(secondValue);
+          }
+      </script>
+
   </body>
   </html> 
