@@ -149,7 +149,7 @@ if(isset($_GET['action'])=='submitfunc') {
 <body>
     <nav>
     <div class="sidenav">
-        <a href="index.html">About</a>
+        <a href="index.php">About</a>
         <a href="menu.php">Menu</a>
         <a href="contact.php">Contact</a>
       </div>

@@ -17,8 +17,17 @@
         width: 90%;
         height: 50%;
       }
-      .top{
-        margin-top:15%
+      .reservation{
+      margin-left: 76%;
+      margin-top: -12.5vh;
+  }
+      .contact{
+        margin-left: 3vw;
+        height: auto;
+      }
+      .contact-form p{
+        font-size: 1.5rem;
+        margin-left: 2vw;
       }
       input[type="text"]
     {
@@ -91,10 +100,12 @@
         color: #b1c8bc;
         background:#426e9a;
     }
-      .meal{
-        float: left;
-        position: absolute;        
+
+
+      .allmeals{
+        margin-top: 12.5vh;
       }
+
       .mealoftheday{
         background-color:#E8E8E8;
         width:53%;
@@ -107,6 +118,10 @@
       box-shadow: 0px 0px 21px -3px rgb(110, 109, 109);
       transform: scale(1.01);
   }
+      .meal{
+        float: left;
+        position: absolute;        
+      }
       .meal h1{
         font-size:3.125rem;
         color: #71a1d1;
@@ -127,8 +142,8 @@
         border-radius: .375em;  
         transition: .6s ease-out;  
         color: #426e9a;  
-        margin-left: 15vw !important;
-        margin-top: 0% !important;
+        margin-left: 16.5vw !important;
+        margin-top: -1% !important;
         position: absolute;
     }
       .order{
@@ -176,10 +191,16 @@
         }
         </style>
   </head>
+  <?php
+if(isset($_GET['action'])=='submitfunc') {
+  submitfunc();
+}else
+//show form
+?>
   <body>
       <nav>
       <div class="sidenav">
-          <a href="index.html">About</a>
+          <a href="index.php">About</a>
           <a href="menu.php">Menu</a>
           <a href="contact.php">Contact</a>
         </div>
@@ -187,6 +208,7 @@
 
       <main>	
         <div class="top"> 
+        <p style="width:50%">Menu</p>
         <button  class="reservation" value="Reservation" id="myBtn">RESERVATION</button>
 
         <!-- The Modal -->
@@ -221,13 +243,15 @@
             </div>
         </div>
       </div>
-
+      <div class="allmeals">
         <div class="mealoftheday">
         <div class="meal">
           <h1>Meal of the day</h1>
           <h2>Tenderloin Steak</h2>
           <div class="border"></div>
-          <p class="info">Known as an eye fillet in Australia, filet in France, filé mignon in Brazil, is cut from the loin of beef. </p>
+          <p class="info">Known as an eye fillet in Australia, filet in France, filé mignon in Brazil, is cut from the loin of beef. 
+          It has lean and juicy meat, making it ideal for roasting or grilling. This is largely due to the muscles used to cut this steak.
+          </p>
           <button class="order" type="button" onClick="onClick();addTheValue(25);">$25</button>
         </div>
 <div class="food-rotate">
@@ -236,17 +260,6 @@
 
         <div style="margin-top: 5vh;" class="steaks-menu">
           <div style="margin-left: 2.5vw;" class="steaks-card">
-              <div class="header">
-                  <img src="https://images.unsplash.com/photo-1607116176195-b81b1f41f536?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8ZmlsZXQlMjBtaWdub258ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60">
-              </div>
-          <h1 class="name">Tenderloin</h1>
-          <div class="border"></div>
-               <p class="info">Known as an eye fillet in Australia, filet in France, filé mignon in Brazil, is cut from the loin of beef. </p>  
-               <button class="order" type="button" onClick="onClick();addTheValue(25);">$25</button>
-
-              </div> 
-
-          <div class="steaks-card">
               <div class="header">
                   <img src="https://images.unsplash.com/photo-1602216475919-37336ceb4ad3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjB8fHRib25lJTIwc3RlYWt8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60">
               </div>
@@ -266,7 +279,7 @@
           <button class="order" type="button" onClick="onClick();addTheValue(22);">$22</button>
           
         </div>
-
+        </div>
           
       </main>	
 
@@ -321,4 +334,28 @@
       </script>
 
   </body>
+  <?php
+function submitfunc() {
+    include 'config.php';
+  // sending given files to db 
+  if(isset($_POST["submit"])){
+     $name = $_POST['name'];
+     $surname = $_POST['surname'];
+     $date = $_POST['date'];
+     $time = $_POST['time'];
+     $email = $_POST['email'];
+  //   $mealsNum = $_POST['mealsNum'];
+   //  $Total = $_POST['Total'];
+     
+}
+$insert = $db->query("INSERT into reservation (name, surname, date, time, email) VALUES ('$name','$surname','$date','$time','$email')");
+if($insert){
+  echo "<script type='text/javascript'>alert('Successful')</script>";
+   // header("Location: login.php");
+} else
+{
+    echo "error";
+} }
+
+?>
   </html> 
