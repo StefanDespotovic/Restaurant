@@ -109,34 +109,81 @@
         text-align: right;  
       }   
 
-      @media screen and (max-width: 720px) {
-        .sidenav {
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) {
+  .sidenav {
           display: none;
         }
+}
+
+
+@media screen and (max-width: 768px) {
+        .sidenav {
+          display: inline-block;
+        }
+        .location{
+          float: none;
+        }
         .locationgmaps {
-          width: 53vw !important;
-          height: 40vw;
+        top:54vh;
+        right:-24vw;
+        border-bottom-left-radius:0em;
+        border-radius:1em;
+        width:60vw;
+        height:38vw;
+        position: relative;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+        transition: .2s ease-out;
         }
         input[type="text"]
     {
-        width: 29.5vw !important;
+      width: 37.5vw !important;
+    height: 5vh;
+    margin-top: 1vh;
     }
     input[type="email"]
     {
-        width: 29.5vw;
+      width: 37.5vw !important;
+    height: 5vh;
+    margin-top: 11vh;
     }
     input[type="submit"]
     {
         width: 10.5vw;
+       
     }
     .surname{
       margin-left: 0;
     }
+    .submit{
+      margin-left: 33.4vw !important;
+    }
     .worktime{
-      margin-top: 26vh;
+      margin-top: 55vh;
+      margin-left: 18vw;
+    }
+    .table{
+      margin-left:15% !important;
+    }
+    .contact{
+      padding-left: 32%;
+    }
+    form p{
+      width: 105% !important;
     }
 
 }
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}
+
       </style>
 
 </head>
