@@ -58,7 +58,7 @@
         background: transparent;
         display: block;
         padding: .8em 1em;
-        width: 8vw;
+
         border: 1px solid #71a1d1;
         border-radius: .375em;  
         transition: .6s ease-out;  
@@ -110,16 +110,77 @@
       }   
 
 /* Extra Small Devices, Phones */ 
-@media only screen and (min-width : 480px) {
+@media only screen and (max-width: 480px) {
   .sidenav {
-          display: none;
+          display: none !important;
         }
+        .location{
+          float: none;
+          margin-left:2vw;
+        }
+        .locationgmaps {
+        top:54vh;
+        right:-16vw;
+        border-bottom-left-radius:0em;
+        border-radius:1em;
+        width:60vw;
+        height:38vw;
+        position: relative;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+        transition: .2s ease-out;
+        }
+        input[type="text"]
+    {
+      width: 42.5vw !important;
+    height: 6vh;
+    margin-top: 2vh;
+    }
+    input[type="email"]
+    {
+      width: 42.5vw !important;
+    height: 6vh;
+    margin-top: 16.5vh;
+    }
+    input[type="submit"]
+    {
+        width: 10.5vw;
+       
+    }
+    .surname{
+      margin-left: 0;
+    }
+    .submit{
+      margin-left: 36vw !important;
+    }
+    .worktime{
+      margin-top: 57vh;
+      margin-left: 0vw;
+      width: 100%;
+    }
+    .worktime p{
+      padding-left: 2%;
+    }
+    .table{
+      margin-left:15% !important;
+    }
+    .contact{
+      padding-left: 24vw;
+    }
+    form p{
+      width: 75vw !important;
+      margin-left: -6vw !important;
+    }
+
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 481px)  and (max-width: 950px) {
         .sidenav {
           display: inline-block;
+          width: 10% !important;
+        }
+        .sidenav a{
+          font-size:2.5vw;
         }
         .location{
           float: none;
@@ -175,15 +236,91 @@
 }
 
 
-/* Medium Devices, Desktops */
-@media only screen and (min-width : 992px) {
+@media only screen and (min-width: 951px) and (max-width: 1100px)  {
+  .contact{
+        width: 55%;
+        margin-top:-7vh;
+      }
+      .contact-form{
+        width: 65%;
+        height: 20vw;
+      }
+      input[type="text"]
+    {
+        margin-left: 0.9rem;
+    }
+    input[type="email"]
+    {
+      margin-left: 0.9rem;  
+    }
+    .submit
+    {
+        margin-left: 28vw;
+    }
+    .surname {
+      margin-left: 2.45vw;
+    }
+      .location{
+        padding-top: 8%;
+        width: 42%;
+        height: auto;
+        float:left;
+      }
+      .locationgmaps{
+        width:51vw;
+        height:39vw;
+      }
+      .worktime p{
+        padding-left: 1.5vw;
+      }
+      .table{
+        margin-top:3.2vh;
+        margin-left: 0% !important;
+      }
 }
 
-/* Large Devices, Wide Screens */
-@media only screen and (min-width : 1200px) {
-
+@media only screen and (min-width: 1100px) and (max-width: 1100px)  {
+  .contact{
+        width: 55%;
+        margin-top:-7vh;
+      }
+      .contact-form{
+        width: 65%;
+        height: 20vw;
+      }
+      input[type="text"]
+    {
+        margin-left: 0.9rem;
+    }
+    input[type="email"]
+    {
+      margin-left: 0.9rem;  
+    }
+    .submit
+    {
+        margin-left: 28vw;
+    }
+    .surname {
+      margin-left: 2.45vw;
+    }
+      .location{
+        padding-top: 8%;
+        width: 42%;
+        height: auto;
+        float:left;
+      }
+      .locationgmaps{
+        width:51vw;
+        height:39vw;
+      }
+      .worktime p{
+        padding-left: 1.5vw;
+      }
+      .table{
+        margin-top:3.2vh;
+        margin-left: 0% !important;
+      }
 }
-
       </style>
 
 </head>
@@ -238,7 +375,7 @@ if(isset($_GET['action'])=='submitfunc') {
               <tr><th>Tuesday</th><td>9am - 10pm</td></tr>
               <tr><th>Wednesday&nbsp;&nbsp;</th><td>9am - 10pm</td></tr>
             </table>
-          <table>
+          <table class="table">
             <tr><th>Thursday&nbsp;&nbsp;</th><td>9am - 10pm</td></tr>
               <tr><th>Friday</th><td>9am - 11pm</td></tr>
               <tr><th>Saturday</th><td>12am -11pm</td></tr>
