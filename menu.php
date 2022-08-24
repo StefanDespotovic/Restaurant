@@ -18,11 +18,6 @@
     width: 90%;
     height: auto;
   }
-
-    @media screen and (max-width: 768px) {
-        .sidenav {display: none;}
-    }
-    
     .contact{
         margin-left: 3vw;
         height: auto;
@@ -119,7 +114,6 @@
         color: #b1c8bc;
         background:#426e9a;
     }
-
     .worktime {
     margin-top: 7vh;
     margin-left: 9vw;
@@ -136,7 +130,64 @@
         padding-left: 5%;
         text-align: right;  
     }   
+    @media screen and (max-width: 767px) {
+        .sidenav {display: none;}
+    
+        .steaks-menu {
+            margin-top:13vh;
+            margin-left:13%;
+        }
+        .reservation {
+            margin-top: -17vh;
+            margin-left: 50vw !important;
+        }
+        .worktime{
+            display: none;
+        }
+    }
+    @media screen and (min-width: 768px)  and (max-width: 950px) {
+        .worktime {
+            text-align: center;
+  }
+        .sidenav{
+            width:9% !important;
+  }
+        .sidenav a{
+            padding-left: 10% !important;
+            font-size:2.5vw;
+  }
+        .table{
+            margin-left: 8% !important;
+        }
+        main{
+            margin-left: 10% !important;
+        }
+    }
+    @media screen and (min-width: 1024px)  and (max-width: 1280px) {
+        .sidenav{
+            width:9% !important;
+  }
+        .sidenav a{
+            padding-left: 10% !important;
+            font-size:2.5vw;
+  }
+        main{
+            margin-left: 10% !important;
+        }
+        .table{
+            margin-left: 32% !important;
+            display: block;
+        }
+        .table2{
+            margin-left: 29% !important;
+            margin-top: -14vh !important;
+        }
+        .worktime {
+            text-align: center;
+        }
+}
       </style>
+
 </head>
 <?php
 if(isset($_GET['action'])=='submitfunc') {
@@ -452,7 +503,7 @@ if(isset($_GET['action'])=='submitfunc') {
               <tr><th>Tuesday</th><td>9am - 10pm</td></tr>
               <tr><th>Wednesday&nbsp;&nbsp;</th><td>9am - 10pm</td></tr>
             </table>
-          <table>
+          <table class="table2">
             <tr><th>Thursday&nbsp;&nbsp;</th><td>9am - 10pm</td></tr>
               <tr><th>Friday</th><td>9am - 11pm</td></tr>
               <tr><th>Saturday</th><td>12am -11pm</td></tr>
