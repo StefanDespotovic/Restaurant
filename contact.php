@@ -154,13 +154,13 @@
     }
     .worktime{
       margin-top: 57vh;
-      margin-left: 0vw;
       width: 100%;
     }
-    .worktime p{
-      padding-left: 2%;
-    }
+    
     .table{
+      margin-left:15% !important;
+    }
+    .table2{
       margin-left:15% !important;
     }
     .contact{
@@ -258,7 +258,7 @@
         margin-left: 28vw;
     }
     .surname {
-      margin-left: 2.45vw;
+      margin-left: 1.45vw;
     }
       .location{
         padding-top: 8%;
@@ -279,7 +279,7 @@
       }
 }
 
-@media only screen and (min-width: 1100px) and (max-width: 1100px)  {
+@media only screen and (min-width: 1100px) and (max-width: 1180px)  {
   .contact{
         width: 55%;
         margin-top:-7vh;
@@ -301,7 +301,7 @@
         margin-left: 28vw;
     }
     .surname {
-      margin-left: 2.45vw;
+      margin-left: 1.45vw !important;
     }
       .location{
         padding-top: 8%;
@@ -318,7 +318,94 @@
       }
       .table{
         margin-top:3.2vh;
-        margin-left: 0% !important;
+        margin-left: 3% !important;
+      }
+}
+@media only screen and (min-width: 1180px) and (max-width: 1280px)  {
+  .contact{
+        width: 55%;
+        margin-top:-7vh;
+      }
+      .contact-form{
+        width: 65%;
+        height: 20vw;
+      }
+      input[type="text"]
+    {
+        margin-left: 0.9rem;
+    }
+    input[type="email"]
+    {
+      margin-left: 0.9rem;  
+    }
+    .submit
+    {
+        margin-left: 28vw;
+    }
+    .surname {
+      margin-left: 2vw !important;
+    }
+      .location{
+        padding-top: 8%;
+        width: 42%;
+        height: auto;
+        float:left;
+      }
+      .locationgmaps{
+        width:51vw;
+        height:39vw;
+      }
+      .worktime p{
+        padding-left: 1.5vw;
+      }
+      .table{
+        margin-top:3.2vh;
+        margin-left: 7% !important;
+      }
+}
+@media only screen and (min-width: 1280px) and (max-width: 1450px)  {
+  .contact{
+        width: 55%;
+        margin-top:-7vh;
+      }
+      .contact-form{
+        width: 65%;
+        height: 20vw;
+      }
+      input[type="text"]
+    {
+        margin-left: 0.9rem;
+    }
+    input[type="email"]
+    {
+      margin-left: 0.9rem;  
+    }
+    .submit
+    {
+        margin-left: 28vw;
+    }
+    .surname {
+      margin-left: 2.3vw !important;
+    }
+      .location{
+        padding-top: 8%;
+        width: 42%;
+        height: auto;
+        float:left;
+      }
+      .locationgmaps{
+        width:51vw;
+        height:39vw;
+      }
+      .worktime p{
+        padding-left: 1.5vw;
+      }
+      .table{
+        margin-top:3.2vh;
+        margin-left: 18% !important;
+      }
+      .table2{
+        margin-top:3.2vh;
       }
 }
       </style>
@@ -375,7 +462,7 @@ if(isset($_GET['action'])=='submitfunc') {
               <tr><th>Tuesday</th><td>9am - 10pm</td></tr>
               <tr><th>Wednesday&nbsp;&nbsp;</th><td>9am - 10pm</td></tr>
             </table>
-          <table class="table">
+          <table class="table2">
             <tr><th>Thursday&nbsp;&nbsp;</th><td>9am - 10pm</td></tr>
               <tr><th>Friday</th><td>9am - 11pm</td></tr>
               <tr><th>Saturday</th><td>12am -11pm</td></tr>
