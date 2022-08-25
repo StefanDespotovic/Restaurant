@@ -144,6 +144,25 @@
         .worktime{
             display: none;
         }
+        .modal-content {
+            width: 90%;
+            height: 45vh;
+        }
+        .text-right{
+            margin-left:44vw !important;
+        }
+        input[type="text"]{
+            width: 14vw !important;
+        }
+        input[type="date"]{
+            width: 14vw !important;
+        }
+        input[type="time"]{
+            width: 14vw !important;
+        }
+        input[type="email"]{
+            width: 35.5vw !important;
+        }
     }
     @media screen and (min-width: 768px)  and (max-width: 950px) {
         .worktime {
@@ -161,6 +180,25 @@
         }
         main{
             margin-left: 10% !important;
+        }
+        .modal-content {
+            width: 80%;
+            height: 45vh;
+        }
+        .text-right{
+            margin-left:44vw !important;
+        }
+        input[type="text"]{
+            width: 14vw !important;
+        }
+        input[type="date"]{
+            width: 14vw !important;
+        }
+        input[type="time"]{
+            width: 14vw !important;
+        }
+        input[type="email"]{
+            width: 32vw !important;
         }
     }
     @media screen and (min-width: 1024px)  and (max-width: 1280px) {
@@ -184,6 +222,25 @@
         }
         .worktime {
             text-align: center;
+        }
+        .modal-content {
+            width: 70%;
+            height: 45vh;
+        }
+        .text-right{
+            margin-left:44vw !important;
+        }
+        input[type="text"]{
+            width: 14vw !important;
+        }
+        input[type="date"]{
+            width: 14vw !important;
+        }
+        input[type="time"]{
+            width: 14vw !important;
+        }
+        input[type="email"]{
+            width: 31.5vw !important;
         }
 }
       </style>
@@ -230,7 +287,7 @@ if(isset($_GET['action'])=='submitfunc') {
                                             <input id="date" name='date' type="date" placeholder="date" min="<?php echo date("Y-m-d"); ?>" required/>
                                             <input id="date" name='time'  min="09:00" max="23:00" type="time" placeholder="date" required/>
                                             <input id="mail" name='email' type="email" placeholder="Email" required/>
-                                        <div style="position:absolute; margin-left: 18vw">
+                                        <div class="text-right" style="position:absolute; margin-left: 18vw">
                                             <p>Meals ordered: <a name='mealsNum' id="clicks">0</a></p>
                                             <p>Total: $<a name='Total' id="firstValue">0</a></p>
                                             <button type="submit"  class="submit" value="Upload" name="submit">Reserve</button>
