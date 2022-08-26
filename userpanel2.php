@@ -62,7 +62,7 @@ td a{
   <body>
       <nav>
       <div class="sidenav">
-          <a href="index.php">About</a>
+          <a href="about.php">About</a>
           <a href="menu.php">Menu</a>
           <a href="contact.php">Contact</a>
         </div>
