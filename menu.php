@@ -101,13 +101,30 @@
         background: transparent;
         display: block;
         padding: .5em .4em;
-        width: 22.5%;
+        width: 12.5%;
+        height: 2.5%;
         border: 1px solid #71a1d1;
         border-radius: .375em;  
         transition: .6s ease-out;  
         color: #426e9a;  
         margin-left: 68%;
         margin-top: -18%;
+        position: absolute;
+        text-align: center;
+    }
+    .order2{
+        display: none;
+    }    
+    .test{
+        margin-top:-8%;
+        background: transparent;
+        display: block;
+        padding: .5em .4em;
+        width: 22.5%;
+        border: 1px solid #71a1d1;
+        border-radius: .375em;  
+        transition: .6s ease-out;  
+        color: #426e9a;  
         position: absolute;
     }
     .order:hover {
@@ -247,6 +264,8 @@
 
 </head>
 <?php
+//hide error message
+//ini_set('display_errors', 0);
 if(isset($_GET['action'])=='submitfunc') {
   submitfunc();
 }else
@@ -292,7 +311,7 @@ if(isset($_GET['action'])=='submitfunc') {
                                             <p>Total: $<a name='Total' id="firstValue">0</a></p>
                                             <button type="submit"  class="submit" value="Upload" name="submit">Reserve</button>
                                         </div>
-                                        </form>
+                                        
                     
                                 </div>
                             </div>
@@ -309,8 +328,8 @@ if(isset($_GET['action'])=='submitfunc') {
             <h1 class="name">Tenderloin</h1>
             <div class="border"></div>
                  <p class="info">Known as an eye fillet in Australia, filet in France, filé mignon in Brazil, is cut from the loin of beef. </p>  
-                 <button class="order" type="button" onClick="onClick();addTheValue(25);">$25</button>
-
+                 <div class="order"><label><input class="order2" type="checkbox" name="tenderloin[]" id="tenderloin" value="Tenderloin" onClick="onClick();addTheValue(25);"/>$25</label>
+                 </div>
                 </div> 
 
             <div class="steaks-card">
@@ -320,7 +339,8 @@ if(isset($_GET['action'])=='submitfunc') {
             <h1 class="name">T-bone</h1>
             <div class="border"></div>
                  <p class="info">Steaks of beef cut from the loin. They include a T shaped lumbar with sections of internal oblique muscle.</p>  
-                 <button class="order" type="button" onClick="onClick();addTheValue(22);">$22</button>
+                 <div class="order"><label><input class="order2" type="checkbox" name="tenderloin[]" id="tenderloin" value="Tbone" onClick="onClick();addTheValue(22);">$22</label>
+                 </div>
             </div> 
 
             <div class="steaks-card">
@@ -330,7 +350,8 @@ if(isset($_GET['action'])=='submitfunc') {
             <h1 class="name">Tomahawk</h1>
             <div class="border"></div>
             <p class="info">Essentially known as the ribeye beef steak specifically cut with at least five inches of rib bone left intact.</p>  
-            <button class="order" type="button" onClick="onClick();addTheValue(22);">$22</button>
+            <div class="order"><label><input class="order2" type="checkbox" name="tenderloin[]" id="tenderloin" value="Tomahawk" onClick="onClick();addTheValue(22);">$22</label>
+                 </div>
        </div> 
 
             <div class="steaks-card">
@@ -340,7 +361,8 @@ if(isset($_GET['action'])=='submitfunc') {
             <h1 class="name">Flank</h1>
             <div class="border"></div>
                  <p class="info"> Cut of beef steak taken from the flank, which lies forward of the rear quarter of a cow, behind the plate. </p>  
-                 <button class="order" type="button" onClick="onClick();addTheValue(28);">$28</button>
+                 <div class="order"><label><input class="order2" type="checkbox" name="tenderloin[]" id="tenderloin" value="Flank" onClick="onClick();addTheValue(28);">$28</label>
+                 </div>
             </div> 
 
             <div class="steaks-card">
@@ -350,7 +372,8 @@ if(isset($_GET['action'])=='submitfunc') {
             <h1 class="name">Ribeye</h1>
             <div class="border"></div>
                  <p class="info">Sometimes called beauty steaks, are tender, juicy and very flavorful, with just the right amount of fat.</p>  
-                 <button class="order" type="button" onClick="onClick();addTheValue(18);">$18</button>
+                 <div class="order"><label><input class="order2" type="checkbox" name="tenderloin[]" id="tenderloin" value="Ribeye" onClick="onClick();addTheValue(18);">$18</label>
+                 </div>
             </div> 
 
 
@@ -362,7 +385,8 @@ if(isset($_GET['action'])=='submitfunc') {
             <h1 class="name">Nuggets</h1>
             <div class="border"></div>
                  <p class="info">Consisting of a small piece of deboned chicken meat that is breaded, then deep-fried or baked.</p>  
-                 <button class="order" type="button" onClick="onClick();addTheValue(12);">$12</button>
+                 <div class="order"><label><input class="order2" type="checkbox" name="tenderloin[]" id="tenderloin" value="Nuggets" onClick="onClick();addTheValue(12);">$12</label>
+                 </div>
             </div> 
             <div class="steaks-card">
                 <div class="header">
@@ -371,7 +395,8 @@ if(isset($_GET['action'])=='submitfunc') {
             <h1 class="name">Salad</h1>
             <div class="border"></div>
                  <p class="info">Ingredients include mayonnaise, boiled egg, celery, onion, pepper, pickles, mustards.</p>  
-                 <button class="order" type="button" onClick="onClick();addTheValue(10);">$10</button>
+                 <div class="order"><label><input class="order2" type="checkbox" name="tenderloin[]" id="tenderloin" value="Salad" onClick="onClick();addTheValue(10);">$10</label>
+                 </div>
             </div> 
             <div class="steaks-card">
                 <div class="header">
@@ -380,7 +405,8 @@ if(isset($_GET['action'])=='submitfunc') {
             <h1 class="name">Grilled</h1>
             <div class="border"></div>
                  <p class="info">Barbecue chicken is often seasoned or coated in a barbecue sauce, spice rub or both. Marinades is for flavoring.</p>  
-                 <button class="order" type="button" onClick="onClick();addTheValue(14);">$14</button>
+                 <div class="order"><label><input class="order2" type="checkbox" name="tenderloin[]" id="tenderloin" value="Grilled" onClick="onClick();addTheValue(14);">$14</label>
+                 </div>
             </div> 
             <div class="steaks-card">
                 <div class="header">
@@ -389,7 +415,8 @@ if(isset($_GET['action'])=='submitfunc') {
             <h1 class="name">Sandwich</h1>
             <div class="border"></div>
                  <p class="info">Sandwich that consists of boneless, skinless chicken breast or thigh served between slices of bread, on a bun.</p>  
-                 <button class="order" type="button" onClick="onClick();addTheValue(8);">$8</button>
+                 <div class="order"><label><input class="order2" type="checkbox" name="tenderloin[]" id="tenderloin" value="Sandwich" onClick="onClick();addTheValue(8);">$8</label>
+                 </div>
             </div> 
             <div class="steaks-card">
                 <div class="header">
@@ -398,7 +425,8 @@ if(isset($_GET['action'])=='submitfunc') {
             <h1 class="name">Burger</h1>
             <div class="border"></div>
             <p class="info">It is boneless and skinless chicken breast on a hamburger bun, accompanied by spices and garnishes.</p>  
-            <button class="order" type="button" onClick="onClick();addTheValue(9);">$9</button>
+            <div class="order"><label><input class="order2" type="checkbox" name="tenderloin[]" id="tenderloin" value="Burger" onClick="onClick();addTheValue(9);">$9</label>
+                 </div>
        </div> 
             
 
@@ -410,7 +438,8 @@ if(isset($_GET['action'])=='submitfunc') {
             <h1 class="name">Roasted potato</h1>
             <div class="border"></div>
                  <p class="info">Roasted sweet potatoes, avocado, black beans and raw kale are tossed in a creamy dressing.</p>  
-                 <button class="order" type="button" onClick="onClick();addTheValue(7);">$7</button>
+                 <div class="order"><label><input class="order2" type="checkbox" name="tenderloin[]" id="tenderloin" value="Roasted potato" onClick="onClick();addTheValue(7);">$7</label>
+                 </div>
             </div> 
             <div class="steaks-card">
                 <div class="header">
@@ -419,7 +448,8 @@ if(isset($_GET['action'])=='submitfunc') {
             <h1 class="name">Bruselles Salad</h1>
             <div class="border"></div>
                  <p class="info">Loaded with nuts and fresh fruit, this hearty vegetarian salad makes a great light, healthy lunch.</p>  
-                 <button class="order" type="button" onClick="onClick();addTheValue(15);">$15</button>
+                 <div class="order"><label><input class="order2" type="checkbox" name="tenderloin[]" id="tenderloin" value="Bruselles salad" onClick="onClick();addTheValue(15);">$15</label>
+                 </div>
             </div> 
             <div class="steaks-card">
                 <div class="header">
@@ -428,7 +458,8 @@ if(isset($_GET['action'])=='submitfunc') {
             <h1 class="name">Burrito Bowl</h1>
             <div class="border"></div>
                  <p class="info">Roasted veggies, savory beans and a lime-garlic avocado crema top a bed of cilantro-lime rice.</p>  
-                 <button class="order" type="button" onClick="onClick();addTheValue(18);">$18</button>
+                 <div class="order"><label><input class="order2" type="checkbox" name="tenderloin[]" id="tenderloin" value="Burrito bowl" onClick="onClick();addTheValue(18);">$18</label>
+                 </div>
             </div> 
             <div class="steaks-card">
                 <div class="header">
@@ -437,7 +468,8 @@ if(isset($_GET['action'])=='submitfunc') {
             <h1 class="name">Green Curry Bowl</h1>
             <div class="border"></div>
                  <p class="info">Steamed brown rice, topped with many veggies and finished with flavor punch of green curry sauce.</p>  
-                 <button class="order" type="button" onClick="onClick();addTheValue(16);">$16</button>
+                 <div class="order"><label><input class="order2" type="checkbox" name="tenderloin[]" id="tenderloin" value="Green curry bowl" onClick="onClick();addTheValue(16);">$16</label>
+                 </div>
             </div> 
             <div class="steaks-card">
                 <div class="header">
@@ -446,7 +478,8 @@ if(isset($_GET['action'])=='submitfunc') {
             <h1 class="name">Creamy Ratatouille</h1>
             <div class="border"></div>
                  <p class="info">Classic French Provençal stew that’s inherently vegetarian, and wonderfully rich with summerlate garden bounty. </p>  
-                 <button class="order" type="button" onClick="onClick();addTheValue(19);">$19</button>
+                 <div class="order"><label><input class="order2" type="checkbox" name="tenderloin[]" id="tenderloin" value="Creamy ratatouille" onClick="onClick();addTheValue(19);">$19</label>
+                 </div>
             </div> 
             
 
@@ -458,7 +491,8 @@ if(isset($_GET['action'])=='submitfunc') {
             <h1 class="name">Jambalaya Creole</h1>
             <div class="border"></div>
                  <p class="info">Delicious plant-based with vegan rice and bean one-pot. It contains paprika, onion, tomatoes, parsley.</p>  
-                 <button class="order" type="button" onClick="onClick();addTheValue(22);">$22</button>
+                 <div class="order"><label><input class="order2" type="checkbox" name="tenderloin[]" id="tenderloin" value="Jambalaya creole" onClick="onClick();addTheValue(22);">$22</label>
+                 </div>
             </div> 
             <div class="steaks-card">
                 <div class="header">
@@ -467,7 +501,8 @@ if(isset($_GET['action'])=='submitfunc') {
             <h1 class="name">Sausage Rolls</h1>
             <div class="border"></div>
                  <p class="info">Made with mushrooms, brown rice miso, mustard and sage, it is very tasty and simple to made. </p>  
-                 <button class="order" type="button" onClick="onClick();addTheValue(10);">$10</button>
+                 <div class="order"><label><input class="order2" type="checkbox" name="tenderloin[]" id="tenderloin" value="Sausage rolls" onClick="onClick();addTheValue(10);">$10</label>
+                 </div>
             </div> 
             <div class="steaks-card">
                 <div class="header">
@@ -476,7 +511,8 @@ if(isset($_GET['action'])=='submitfunc') {
             <h1 class="name">Maple pancakes</h1>
             <div class="border"></div>
                  <p class="info">Flat cake that is thin and round, prepared from a starch-based batter and it is poured with maple syrup.</p>  
-                 <button class="order" type="button" onClick="onClick();addTheValue(7);">$7</button>
+                 <div class="order"><label><input class="order2" type="checkbox" name="tenderloin[]" id="tenderloin" value="Maple pancakes" onClick="onClick();addTheValue(7);">$7</label>
+                 </div>
             </div> 
             <div class="steaks-card">
                 <div class="header">
@@ -485,7 +521,8 @@ if(isset($_GET['action'])=='submitfunc') {
             <h1 class="name">Raw Burritos</h1>
             <div class="border"></div>
                  <p class="info">Vegan wraps are with vegetables, rice, chipotle black beans, guacamole and crisp shredded lettuce.</p>  
-                 <button class="order" type="button" onClick="onClick();addTheValue(15);">$15</button>
+                 <div class="order"><label><input class="order2" type="checkbox" name="tenderloin[]" id="tenderloin" value="Raw burritos" onClick="onClick();addTheValue(15);">$15</label>
+                 </div>
             </div> 
             <div class="steaks-card">
                 <div class="header">
@@ -494,7 +531,8 @@ if(isset($_GET['action'])=='submitfunc') {
             <h1 class="name">Baked Scones</h1>
             <div class="border"></div>
                  <p class="info">It is created with soy milk and vegan vegetable spread to replace the dairy. Served with vegan cream and jam.</p>  
-                 <button class="order" type="button" onClick="onClick();addTheValue(10);">$10</button>
+                 <div class="order"><label><input class="order2" type="checkbox" name="tenderloin[]" id="tenderloin" value="Baked scones" onClick="onClick();addTheValue(10);">$10</label>
+                 </div>
             </div>    
             
 
@@ -506,7 +544,8 @@ if(isset($_GET['action'])=='submitfunc') {
             <h1 class="name">Fries</h1>
             <div class="border"></div>
                  <p class="info">They are prepared by cutting potatoes into even strips, drying them, and frying them.</p>  
-                 <button class="order" type="button" onClick="onClick();addTheValue(4);">$4</button>
+                 <div class="order"><label><input class="order2" type="checkbox" name="tenderloin[]" id="tenderloin" value="Fries" onClick="onClick();addTheValue(4);">$4</label>
+                 </div>
             </div> 
             <div class="steaks-card">
                 <div class="header">
@@ -515,7 +554,8 @@ if(isset($_GET['action'])=='submitfunc') {
             <h1 class="name">Potato</h1>
             <div class="border"></div>
                  <p class="info">It is served with fillings, toppings or condiments such as butter, cheese and sour cream.</p>  
-                 <button class="order" type="button" onClick="onClick();addTheValue(3);">$3</button>
+                 <div class="order"><label><input class="order2" type="checkbox" name="tenderloin[]" id="tenderloin" value="Potato" onClick="onClick();addTheValue(3);">$3</label>
+                 </div>
             </div> 
             <div class="steaks-card">
                 <div class="header">
@@ -524,7 +564,8 @@ if(isset($_GET['action'])=='submitfunc') {
             <h1 class="name">Onion rings</h1>
             <div class="border"></div>
                  <p class="info">Cross-sectional "ring" of onion dipped in batter or bread crumbs and then deep fried.</p>  
-                 <button class="order" type="button" onClick="onClick();addTheValue(4);">$4</button>
+                 <div class="order"><label><input class="order2" type="checkbox" name="tenderloin[]" id="tenderloin" value="Onion rings" onClick="onClick();addTheValue(4);">$4</label>
+                 </div>
             </div> 
             <div class="steaks-card">
                 <div class="header">
@@ -533,7 +574,8 @@ if(isset($_GET['action'])=='submitfunc') {
             <h1 class="name">Rice</h1>
             <div class="border"></div>
                  <p class="info">Simple cooked rice with a little basil and onion, completes every meal, you can add curry.</p>  
-                 <button class="order" type="button" onClick="onClick();addTheValue(2);">$2</button>
+                 <div class="order"><label><input class="order2" type="checkbox" name="tenderloin[]" id="tenderloin" value="Rice" onClick="onClick();addTheValue(2);">$2</label>
+                 </div>
             </div> 
             <div class="steaks-card">
                 <div class="header">
@@ -542,10 +584,11 @@ if(isset($_GET['action'])=='submitfunc') {
             <h1 class="name">Roasted</h1>
             <div class="border"></div>
                  <p class="info">Crisp on the outside and fluffy on the inside, an easy side dish with every meal.</p>  
-                 <button class="order" type="button" onClick="onClick();addTheValue(4);">$4</button>
+                 <div class="order"><label><input class="order2" type="checkbox" name="tenderloin[]" id="tenderloin" value="Roasted" onClick="onClick();addTheValue(4);">$4</label>
+                 </div>
             </div>    
 
-
+            </form>
 
         </div> 
 
@@ -618,6 +661,7 @@ if(isset($_GET['action'])=='submitfunc') {
 
 </body>
 <?php
+
 function submitfunc() {
     include 'config.php';
   // sending given files to db 
@@ -627,11 +671,13 @@ function submitfunc() {
      $date = $_POST['date'];
      $time = $_POST['time'];
      $email = $_POST['email'];
+     $tenderloin = $_POST['tenderloin'];
+     $thestring = implode(", ", $tenderloin);
   //   $mealsNum = $_POST['mealsNum'];
    //  $Total = $_POST['Total'];
      
 }
-$insert = $db->query("INSERT into reservation (name, surname, date, time, email) VALUES ('$name','$surname','$date','$time','$email')");
+$insert = $db->query("INSERT into reservation (name, surname, date, time, email, meal) VALUES ('$name','$surname','$date','$time','$email','$thestring')");
 if($insert){
   echo "<script type='text/javascript'>alert('Successful')</script>";
    // header("Location: login.php");
