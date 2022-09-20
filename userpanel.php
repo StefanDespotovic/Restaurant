@@ -76,6 +76,8 @@
     <th>Date</th>
     <th>Time</th>
     <th>Email</th>
+    <th>Meals</th>
+    <th>Delete</th>
   </tr>
   <?php
 	
@@ -84,7 +86,7 @@
         
 	$result = mysqli_connect($dbHost,$dbUsername,$dbPassword) or die("Could not connect to database." .mysqli_error());
 	mysqli_select_db($result,$dbName) or die("Could not select the databse." .mysqli_error());
-	$test = mysqli_query($result,"select id,name,surname,date,time,email from reservation");
+	$test = mysqli_query($result,"select id,name,surname,date,time,email,meal from reservation");
 	while($rows = mysqli_fetch_array($test))
 	{
 		$id = $rows['id'];
@@ -93,6 +95,7 @@
         $date = $rows['date'];
 		$time = $rows['time'];
         $email = $rows['email'];
+        $meal = $rows['meal'];
 	?>
 
   <tr>
@@ -102,6 +105,8 @@
     <td><?php echo $date?></td>
     <td><?php echo $time?></td>
     <td><?php echo $email?></td>
+    <td><?php echo $meal?></td>
+    <td><a href="delete2.php?id=<?php echo $rows['id']; ?>">Delete</a></td>
   </tr>
   <a href="checkold.php?id=<?php echo $rows['id']; ?>">DELETE OLD RESERVATIONS</a> 
   <?php
