@@ -11,6 +11,7 @@
       <link href="https://fonts.googleapis.com/css?family=Aldrich&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="css/styles.css">
       <link rel="stylesheet" href="css/reservation.css">
+      <?php include 'worktime.php';?>
       <style>
       main {
         margin-left:7%;
@@ -89,8 +90,8 @@
         border-radius: .375em;  
         transition: .6s ease-out;  
         color: #426e9a;  
-        margin-left: 7.4vw;
-        margin-top: 3.5vw;
+        margin-left: -4.8vw;
+        margin-top: 10vw;
     }
     input:focus {
         border: 1.5px solid #426e9a !important;
@@ -111,7 +112,7 @@
         width:53%;
         float: left;
         border-radius: 1rem;
-        margin-top: 7.5vh;
+        margin-top: 2.5vh;
         transition: transform .5s ease-in-out;
       }
       .mealoftheday:hover {
@@ -163,6 +164,25 @@
         color: #b1c8bc;
         background:#426e9a;
     }
+    .meals{
+        background: transparent;
+        display: block;
+        padding: .5em .4em;
+        width: 9.5%;
+        border: 1px solid #71a1d1;
+        border-radius: .375em;  
+        transition: .6s ease-out;  
+        color: #426e9a;  
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2vh;
+        text-align: center;
+        text-decoration:none;
+    }
+    .meals:hover {
+        color: #b1c8bc;
+        background:#426e9a;
+    }
     .meal .info {
       margin-top: -10px;
       width: 18vw;
@@ -171,19 +191,36 @@
       padding: 30px;
   }
       .food-rotate{
-        margin-left: 20vw;
-        margin-top: 6vh;
+        margin-left: 23vw;
+        margin-top: 5vh;
         width: 30vw;
         float:left;
       }
       .food-rotate img{
-        width: 80%;
+        width: 72%;
         height: auto;
         max-height: none;
         transition: transform .7s ease-in-out;
       }
       .food-rotate img:hover {
         transform: rotate(30deg) scale(1.1);
+      }
+      .menu{
+        margin-top: 5vh;
+        width: 100%;
+      }
+      .imgMenu {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 15vw;
+      }
+      .imgMenuText  {
+        display: block;
+        margin-left: 35vw;
+        width: 24vw;
+        font-size: 1.5rem;
+        color: #426e9a;
       }
         
         @media screen and (max-width: 768px) {
@@ -196,10 +233,12 @@ if(isset($_GET['action'])=='submitfunc') {
   submitfunc();
 }else
 //show form
+
 ?>
   <body>
       <nav>
       <div class="sidenav">
+          <a style="<?php echo($status < 0 ? 'color:red' : 'color:green'); ?>" class="sidenavphp"><?php echo " $status";?></a>
           <a href="about.php">About</a>
           <a href="menu.php">Menu</a>
           <a href="contact.php">Contact</a>
@@ -207,6 +246,7 @@ if(isset($_GET['action'])=='submitfunc') {
       </nav>
 
       <main>	
+
         <div class="top"> 
         <p style="width:50%">Menu</p>
         <button  class="reservation" value="Reservation" id="myBtn">RESERVATION</button>
@@ -214,7 +254,7 @@ if(isset($_GET['action'])=='submitfunc') {
         <!-- The Modal -->
         <div id="myModal" class="modal">
             <!-- Modal content -->
-            <div class="modal-content">
+            <div style="width:23%" class="modal-content">
                 <div class="modal-header">
                     <span class="close">&times;</span>
                     <h2 style="margin-left: 2vw;">Reservation</h2>
@@ -223,7 +263,7 @@ if(isset($_GET['action'])=='submitfunc') {
                 
                 </div>
                     <div class="contact">
-                        <div class="contact-form">
+                        <div style="margin-left:-2%" class="contact-form">
                                 <form action="?action=submitfunc" method="post" enctype="multipart/form-data">
                                     <input style="width:7vw; float:left;" id="name" name='name' type="text" placeholder="Name" required/>
                                     <input style="width:7vw; float:left;margin-left: .5vw;" id="surname" name='surname' type="text" placeholder="Surname" required/>
@@ -231,8 +271,6 @@ if(isset($_GET['action'])=='submitfunc') {
                                     <input id="date" name='time'  min="09:00" max="23:00" type="time" placeholder="date" required/>
                                     <input id="mail" name='email' type="email" placeholder="Email" required/>
                                 <div style="position:absolute; margin-left: 18vw">
-                                    <p>Meals ordered: <a name='mealsNum' id="clicks">0</a></p>
-                                    <p>Total: $<a name='Total' id="firstValue">0</a></p>
                                     <button type="submit"  class="submit" value="Upload" name="submit">Reserve</button>
                                 </div>
                                 </form>
@@ -280,7 +318,11 @@ if(isset($_GET['action'])=='submitfunc') {
           
         </div>
         </div>
-          
+        <div class="menu">
+          <img class="imgMenu" src="images/menu.png">
+          <h1 class="imgMenuText">Scan QR code to view menu</h1>
+          <a class="meals" href="menu.pdf" target="_blank"> Download Menu</a>
+        </div>
       </main>	
 
       
@@ -311,26 +353,7 @@ if(isset($_GET['action'])=='submitfunc') {
         }
       }
 
-      // Clicks counter
-      var clicks = 0;
-          function onClick() {
-          clicks += 1;
-          document.getElementById("clicks").innerHTML = clicks;
-          };
 
-
-
-          function sum(){
-          document.getElementById("sum").innerText=document.getElementById("sum").innerText*1+event.target.innerText*1;
-          }
-
-
-
-
-      function addTheValue(secondValue) {
-              var fValue = document.getElementById("firstValue");
-              firstValue.innerHTML = parseInt(fValue.innerHTML) + parseInt(secondValue);
-          }
       </script>
 
   </body>

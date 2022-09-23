@@ -30,7 +30,22 @@ body {
     color: #81d0e8;
     text-shadow: 2px 2px 5px rgb(185, 185, 185);
   }
-  
+  .sidenavphp {
+    margin-top: 1vh !important;
+    border: 0px solid #71a1d1;
+    padding-left: 0% !important;
+    margin-left:auto;
+    margin-right:auto;
+    border-radius: .375em;  
+    width: 6vw;
+    font-size: 1.5vw;
+    display: block;
+    background-color: #F2F2F2;
+    text-align: center;
+  }
+  .sidenavphp a:hover {
+    color: #71a1d1;
+  }
 
   .worktime {
     margin-left:7vw;
