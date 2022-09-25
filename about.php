@@ -104,10 +104,11 @@
 
 
       .allmeals{
-        margin-top: 12.5vh;
+        margin-top: -2.5vh !important;
       }
 
       .mealoftheday{
+        margin-left: 4.3vw;
         background-color:#E8E8E8;
         width:53%;
         float: left;
@@ -176,6 +177,7 @@
         margin-left: auto;
         margin-right: auto;
         margin-top: 2vh;
+        margin-bottom:5vh;
         text-align: center;
         text-decoration:none;
     }
@@ -222,6 +224,41 @@
         font-size: 1.5rem;
         color: #426e9a;
       }
+      .welcome{
+        margin-top: 12vh;
+      }
+      .welcomeBothSides{
+        width: 90%;
+        height:30%;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        border-radius:0;
+        margin-bottom:100px;  
+        transition: transform .6s ease-in-out;
+      }
+      .welcomeBothSides:hover {
+      box-shadow: 0px 0px 21px -3px rgb(110, 109, 109);
+      transform: scale(1.01);
+      border-radius: 1rem;
+      }
+      .welcomeImg{
+        flex: 1;  
+        border-radius:0;
+        background-color: #E8E8E8;
+      }
+      .welcomeImg h1{
+        font-size:3.125rem;
+        color: #71a1d1;
+        margin-left: 1vw;
+      }
+      .welcomeImg h2{
+        font-size:2rem;
+        color: #71a1d1;
+        margin-top:-4vh;
+        margin-left: 1vw;
+      }
+
         
         @media screen and (max-width: 768px) {
           .sidenav {display: none;}
@@ -248,7 +285,7 @@ if(isset($_GET['action'])=='submitfunc') {
       <main>	
 
         <div class="top"> 
-        <p style="width:50%">Menu</p>
+        <p style="width:50%">First Steak</p>
         <button  class="reservation" value="Reservation" id="myBtn">RESERVATION</button>
 
         <!-- The Modal -->
@@ -280,6 +317,19 @@ if(isset($_GET['action'])=='submitfunc') {
                 
             </div>
         </div>
+      </div>
+    <div class="welcome">
+      <div class="welcomeBothSides">
+      <img style="min-height: 50vh; border-top-left-radius:1rem;border-bottom-left-radius:1rem" class="welcomeImg" src="images/test2.jpg">      
+      <div  style="border-top-right-radius:1rem;border-bottom-right-radius:1rem" class="welcomeImg">
+        <h1>Menu based on superb taste</h1>
+        <h2>First Steak?</h2>
+        <div style="width: 70%;" class="border"></div>
+        <p class="info">Known as an eye fillet in Australia, filet in France, filé mignon in Brazil, is cut from the loin of beef. 
+        It has lean and juicy meat, making it ideal for roasting or grilling. This is largely due to the muscles used to cut this steak.
+        </p>
+      </div>
+      </div>
       </div>
       <div class="allmeals">
         <div class="mealoftheday">
@@ -323,6 +373,7 @@ if(isset($_GET['action'])=='submitfunc') {
           <h1 class="imgMenuText">Scan QR code to view menu</h1>
           <a class="meals" href="menu.pdf" target="_blank"> Download Menu</a>
         </div>
+
       </main>	
 
       
