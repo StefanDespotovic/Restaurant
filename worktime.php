@@ -1,12 +1,12 @@
 <?php
 $storeSchedule = [
-  'Sun' => ['00:00 AM' => '00:01 AM'],
-  'Mon' => ['09:00 AM' => '10:00 PM'],
-  'Tue' => ['09:00 AM' => '10:00 PM'],
-  'Wed' => ['09:00 AM' => '10:00 PM'],
-  'Thu' => ['09:00 AM' => '10:00 PM'],
-  'Fri' => ['09:00 AM' => '11:00 PM'],
-  'Sat' => ['12:00 AM' => '11:00 PM']
+  //'Sun' => ['Closed'],
+  'Mon' => ['08:00 AM' => '09:00 PM'],
+  'Tue' => ['08:00 AM' => '09:00 PM'],
+  'Wed' => ['08:00 AM' => '09:00 PM'],
+  'Thu' => ['08:00 AM' => '09:00 PM'],
+  'Fri' => ['08:00 AM' => '10:00 PM'],
+  'Sat' => ['11:00 AM' => '10:00 PM']
 ];
 $timestamp = time();
 
@@ -20,4 +20,6 @@ foreach ($storeSchedule[date('D', $timestamp)] as $startTime => $endTime) {
         break;
     }
 }
+
+
 ?>

@@ -8,11 +8,15 @@
       <title>First Steak</title>
       <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <link href="https://fonts.googleapis.com/css?family=Aldrich&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="css/styles.css">
       <link rel="stylesheet" href="css/reservation.css">
       <?php include 'worktime.php';?>
       <style>
+      .topnav{
+          display:none;
+      }
       main {
         margin-left:7%;
         width: 90%;
@@ -90,8 +94,8 @@
         border-radius: .375em;  
         transition: .6s ease-out;  
         color: #426e9a;  
-        margin-left: -4.8vw;
-        margin-top: 10vw;
+        margin-left: 7.4vw;
+        margin-top: 3.5vw;
     }
     input:focus {
         border: 1.5px solid #426e9a !important;
@@ -193,8 +197,8 @@
       padding: 30px;
   }
       .food-rotate{
-        margin-left: 23vw;
-        margin-top: 5vh;
+        margin-left: 20vw;
+        margin-top: 6vh;
         width: 30vw;
         float:left;
       }
@@ -260,9 +264,43 @@
       }
 
         
-        @media screen and (max-width: 768px) {
+      @media screen and (max-width: 768px) {
           .sidenav {display: none;}
+                  
+.topnav {
+    display:block;
+  overflow: hidden;
+  background-color: #E8E8E8;
+  position: relative;
+}
+
+.topnav #myLinks {
+  display: none;
+}
+
+.topnav a {
+  color: black;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+.topnav a.icon {
+  background: #e8e8e8;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.active {
+  background-color: #71a1d1;
+  color: white;
+}
         }
+        
+        
+
         </style>
   </head>
   <?php
@@ -270,7 +308,6 @@ if(isset($_GET['action'])=='submitfunc') {
   submitfunc();
 }else
 //show form
-
 ?>
   <body>
       <nav>
@@ -281,6 +318,20 @@ if(isset($_GET['action'])=='submitfunc') {
           <a href="contact.php">Contact</a>
         </div>
       </nav>
+      <div class="mobile-container">
+
+<!-- Top Navigation Menu -->
+<div class="topnav">
+  <a href="#home" class="active">Logo</a>
+  <div id="myLinks">
+          <a href="about.php">About</a>
+          <a href="menu.php">Menu</a>
+          <a href="contact.php">Contact</a>
+  </div>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
 
       <main>	
 
@@ -403,6 +454,14 @@ if(isset($_GET['action'])=='submitfunc') {
           modal.style.display = "none";
         }
       }
+      function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
 
 
       </script>

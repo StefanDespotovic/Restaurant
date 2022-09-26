@@ -9,11 +9,15 @@
     <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Aldrich&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/reservation.css">
     <link rel="stylesheet" href="css/styles.css">
     <?php include 'worktime.php';?>
 
     <style>   
+    .topnav{
+        display:none;
+    }
   main {
     margin-left:7%;
     width: 90%;
@@ -184,6 +188,7 @@
     }
     @media screen and (min-width: 768px)  and (max-width: 950px) {
         .worktime {
+            margin-left:0vw;
             text-align: center;
   }
         .sidenav{
@@ -261,6 +266,41 @@
             width: 31.5vw !important;
         }
 }
+@media screen and (max-width: 768px) {
+          .sidenav {display: none;}
+                  
+.topnav {
+    display:block;
+  overflow: hidden;
+  background-color: #E8E8E8;
+  position: relative;
+}
+
+.topnav #myLinks {
+  display: none;
+}
+
+.topnav a {
+  color: black;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+.topnav a.icon {
+  background: #e8e8e8;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.active {
+  background-color: #71a1d1;
+  color: white;
+}
+        }
+        
       </style>
 
 </head>
@@ -275,11 +315,25 @@ if(isset($_GET['action'])=='submitfunc') {
 <body>
     <nav>
     <div class="sidenav">
+        <a style="<?php echo($status < 0 ? 'color:red' : 'color:green'); ?>" class="sidenavphp"><?php echo " $status";?></a>
         <a href="about.php">About</a>
         <a href="menu.php">Menu</a>
         <a href="contact.php">Contact</a>
       </div>
     </nav>
+        <!-- Top Navigation Menu -->
+<div class="topnav">
+  <a href="#home" class="active">Logo</a>
+  <div id="myLinks">
+          <a href="about.php">About</a>
+          <a href="menu.php">Menu</a>
+          <a href="contact.php">Contact</a>
+  </div>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
 
     <main style="border-bottom: 1px solid #71a1d1;">
         <div class="top"> 
@@ -658,6 +712,17 @@ if(isset($_GET['action'])=='submitfunc') {
                 var fValue = document.getElementById("firstValue");
                 firstValue.innerHTML = parseInt(fValue.innerHTML) + parseInt(secondValue);
             }
+
+
+
+function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
         </script>
 
 </body>
