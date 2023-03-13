@@ -22,5 +22,5 @@ Once they submit the form, their meal selection will be saved in the database. A
 Users can send inquiries and feedback through the contact form. They can access the contact form by clicking on the "Contact" link on the navigation bar. 
 They will be asked to provide their name, email address, and message. Once they submit the form, their inquiry will be saved in the database.
 
-Conclusion
+# Conclusion
 This restaurant management system provides a user-friendly interface for customers to make reservations, select meals, and send inquiries. 
